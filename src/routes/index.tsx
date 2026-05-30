@@ -8,10 +8,10 @@ import { submitContact } from "@/lib/contact.functions";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "José Carlos Hidalgo | Asesor Financiero e Hipotecario" },
-      { name: "description", content: "Asesoramiento financiero e hipotecario para autónomos y familias. Protege tus ingresos, tu vivienda y tu futuro. Diagnóstico gratuito en Alicante." },
-      { property: "og:title", content: "José Carlos Hidalgo | Asesor Financiero" },
-      { property: "og:description", content: "Protege tus ingresos, tu vivienda y tu futuro financiero." },
+      { title: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
+      { name: "description", content: "Abogada con 20 años de experiencia, visión institucional y trayectoria en alta dirección pública. Asesoramiento jurídico estratégico para particulares, empresas e instituciones en Alicante." },
+      { property: "og:title", content: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
+      { property: "og:description", content: "Asesoramiento jurídico estratégico en derecho administrativo, civil e institucional. 20 años de experiencia y visión institucional." },
     ],
   }),
   component: Index,
@@ -30,31 +30,32 @@ const Icon = ({ name, className = "" }: { name: string; className?: string }) =>
 );
 
 const services = [
-  { icon: "analytics", title: "Planificación financiera personal", text: "Análisis completo de flujos de caja y objetivos vitales para diseñar una hoja de ruta a medida." },
-  { icon: "real_estate_agent", title: "Hipotecas en Alicante", text: "Búsqueda y negociación de las mejores condiciones del mercado para tu vivienda en la zona." },
-  { icon: "assured_workload", title: "Protección de ingresos", text: "Seguros de baja laboral y contingencias diseñados específicamente para el perfil autónomo." },
-  { icon: "trending_up", title: "Ahorro e inversión", text: "Vehículos eficientes para que tus ahorros batan a la inflación con el riesgo bajo control." },
-  { icon: "family_restroom", title: "Salud y protección familiar", text: "Cobertura médica privada y seguros de vida para garantizar la tranquilidad de los tuyos." },
-  { icon: "domain", title: "Administración de fincas", text: "Gestión profesional de comunidades, optimizando costes y garantizando la convivencia." },
+  { icon: "account_balance", title: "Derecho administrativo", text: "Asesoramiento y defensa en procedimientos administrativos, recursos, responsabilidad patrimonial, contratación pública, expedientes sancionadores y relaciones con la Administración." },
+  { icon: "gavel", title: "Derecho civil", text: "Contratos, reclamaciones, conflictos patrimoniales, responsabilidad civil, obligaciones y defensa de derechos e intereses particulares o profesionales." },
+  { icon: "domain", title: "Derecho público e institucional", text: "Asesoramiento jurídico a entidades, profesionales y responsables públicos en asuntos con impacto administrativo, organizativo o institucional." },
+  { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
+  { icon: "business_center", title: "Asesoramiento a empresas y profesionales", text: "Apoyo jurídico en conflictos, contratación, relaciones con terceros, reclamaciones, cumplimiento y toma de decisiones con trascendencia legal." },
+  { icon: "psychology", title: "Consultoría jurídica especializada", text: "Informes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
 ];
 
 const errors = [
-  { n: "01", title: "Piden la hipoteca sin preparar su perfil", text: "Llegan al banco con prisas y sin saber que una preparación de 6 meses ahorra miles en intereses." },
-  { n: "02", title: "Confían todo a sus ingresos actuales", text: "Especialmente autónomos. El bienestar de hoy no garantiza la seguridad de mañana sin un plan B real." },
-  { n: "03", title: "Preparan la jubilación demasiado tarde", text: "El interés compuesto necesita tiempo. Cada año que esperas, el coste de oportunidad es mayor." },
+  { n: "01", title: "Consultar demasiado tarde", text: "Muchos asuntos se complican porque se pide ayuda cuando el conflicto ya está avanzado, los plazos corren o la documentación no se ha preparado bien." },
+  { n: "02", title: "Mirar solo el expediente", text: "Un buen análisis jurídico debe valorar los hechos, la prueba, los tiempos, los riesgos y las consecuencias prácticas de cada decisión." },
+  { n: "03", title: "Judicializar sin estrategia", text: "No todos los asuntos deben acabar en los tribunales. A veces conviene negociar, requerir, preparar mejor la posición o anticipar escenarios antes de iniciar acciones." },
 ];
 
 const method = [
-  { n: "01.", title: "Analizo tu punto de partida", text: "Sin juicios. Recopilamos datos reales de tu economía actual para tener una base sólida sobre la que construir." },
-  { n: "02.", title: "Detecto riesgos y oportunidades", text: "Puntos ciegos donde estás perdiendo dinero o asumiendo un riesgo que no conocías." },
-  { n: "03.", title: "Diseño un plan accionable", text: "Recibirás recomendaciones claras y pasos a seguir que tú decides si ejecutar o no." },
+  { n: "01.", title: "Diagnóstico inicial", text: "Se estudian los hechos, la documentación, los antecedentes, los plazos y los objetivos reales del cliente." },
+  { n: "02.", title: "Valoración jurídica", text: "Se analizan las alternativas posibles, los puntos fuertes, los riesgos y las consecuencias prácticas de cada vía." },
+  { n: "03.", title: "Hoja de ruta", text: "Se define una estrategia clara, con actuaciones concretas, prioridades y seguimiento profesional del asunto." },
 ];
 
 const faqs = [
-  { q: "¿Realmente es gratuito el primer diagnóstico?", a: "Sí, totalmente. Mi objetivo en esta primera toma de contacto es entender si puedo ayudarte. Tú obtienes claridad sobre tu situación y yo entiendo el reto. Sin compromisos." },
-  { q: "¿Trabajas con todos los bancos para las hipotecas?", a: "Trabajo con las principales entidades nacionales e internacionales para asegurar que la oferta que te presento es la más competitiva para tu perfil específico." },
-  { q: "¿Cuál es la diferencia entre un asesor y el banco?", a: "El director del banco es un empleado de su entidad y vende sus productos. Yo soy un asesor independiente que busca el producto que mejor encaja contigo entre todo el mercado." },
-  { q: "¿Atiendes presencialmente en Alicante?", a: "Atiendo presencialmente en toda la zona de Alicante, Altea y Marina Baixa. Si estás fuera, realizo consultas por videollamada con la misma eficacia." },
+  { q: "¿Qué tipo de asuntos lleva Verónica López?", a: "Asuntos jurídicos que requieren análisis, estrategia y criterio profesional, especialmente en el ámbito administrativo, civil, institucional y de asesoramiento preventivo." },
+  { q: "¿Trabaja con particulares, empresas e instituciones?", a: "Sí. El asesoramiento puede dirigirse a particulares, profesionales, empresas, entidades e instituciones que necesiten orientación jurídica especializada." },
+  { q: "¿La primera consulta es gratuita?", a: "La primera consulta permite valorar el asunto, revisar la información básica y determinar la mejor forma de actuar." },
+  { q: "¿Atiende en Alicante?", a: "Atiende en Alicante y también puede realizar consultas online cuando el asunto lo permita." },
+  { q: "¿Qué diferencia este despacho?", a: "La combinación de experiencia jurídica, trayectoria institucional y visión académica. Esa perspectiva permite analizar cada asunto con profundidad y diseñar estrategias realistas." },
 ];
 
 // ----- Motion primitives -----
@@ -143,17 +144,17 @@ function Header() {
         <a className="flex items-center gap-3 group" href="#">
           <motion.img
             src={LOGO}
-            alt="Logo José Carlos Hidalgo"
+            alt="Logo Verónica López"
             className="h-9 w-9 object-contain"
             whileHover={{ rotate: -6, scale: 1.05 }}
             transition={spring}
           />
           <span className="text-base md:text-lg font-bold tracking-tight uppercase">
-            José Carlos Hidalgo
+            Verónica López
           </span>
         </a>
         <div className="hidden md:flex items-center gap-10">
-          {[["Servicios", "#services"], ["Método", "#method"], ["Sobre mí", "#about"], ["FAQ", "#faq"], ["Contacto", "#contact"]].map(([l, h]) => (
+          {[["Áreas", "#services"], ["Método", "#method"], ["Sobre mí", "#about"], ["FAQ", "#faq"], ["Contacto", "#contact"]].map(([l, h]) => (
             <a
               key={h}
               className="relative text-sm font-medium text-[#1A1A1A] group"
@@ -197,12 +198,12 @@ function Hero() {
                 transition={{ duration: 0.9, ease: easeOutExpo, delay: 0.4 }}
                 className="h-[2px] bg-[#FF6B00] block"
               />
-              ASESORÍA FINANCIERA E HIPOTECARIA
+              ABOGADA · VISIÓN INSTITUCIONAL
             </div>
           </FadeUp>
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight text-balance">
-            {["Protege tus ingresos,", "tu vivienda y tu", "futuro financiero"].map((line, i) => (
+            {["Abogada con visión", "institucional y 20 años", "de experiencia"].map((line, i) => (
               <Curtain key={i} delay={0.15 + i * 0.1} className="block">
                 <span className="block">{line}</span>
               </Curtain>
@@ -211,7 +212,7 @@ function Hero() {
 
           <FadeUp delay={0.6}>
             <p className="text-xl text-[#4A4A4A] max-w-xl leading-relaxed">
-              Asesoramiento financiero e hipotecario para autónomos y familias que quieren tomar decisiones importantes sin improvisar. Analizo tu situación, detecto riesgos y te propongo un plan claro para proteger lo que has construido.
+              Asesoramiento jurídico estratégico para particulares, empresas e instituciones que necesitan claridad, rigor y una visión completa antes de tomar decisiones importantes.
             </p>
           </FadeUp>
 
@@ -224,16 +225,16 @@ function Hero() {
                 className="bg-[#FF6B00] text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#1A1A1A] transition-colors shadow-xl shadow-[#FF6B00]/10"
                 href="#contact"
               >
-                Solicitar diagnóstico gratuito
+                Solicitar consulta
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={spring}
                 className="border border-[#1A1A1A] text-[#1A1A1A] px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#1A1A1A] hover:text-white transition-colors"
-                href="#services"
+                href="#about"
               >
-                Ver servicios
+                Conocer trayectoria
               </motion.a>
             </div>
           </FadeUp>
@@ -250,11 +251,10 @@ function Hero() {
             <div className="relative overflow-hidden">
               <motion.img
                 style={{ y: imgY, scale: imgScale }}
-                alt="Asesoramiento financiero e hipotecario"
+                alt="Verónica López, abogada"
                 className="w-full h-auto object-cover"
                 src={IMG(1)}
               />
-              {/* Functional bottom-to-top dark gradient for text legibility */}
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
           </motion.div>
@@ -266,9 +266,9 @@ function Hero() {
 
 function TrustStats() {
   const items = [
-    { i: "visibility", t: "360º visión financiera y patrimonial" },
-    { i: "map", t: "1 plan claro antes de contratar" },
-    { i: "medical_services", t: "0€ diagnóstico inicial" },
+    { i: "workspace_premium", t: "20 años de ejercicio profesional" },
+    { i: "account_balance", t: "Alta dirección pública" },
+    { i: "school", t: "Docencia en la Facultad de Derecho" },
   ];
   return (
     <section className="py-16 border-b border-[#E5E5E5]">
@@ -290,16 +290,16 @@ function TrustStats() {
 
 function Diagnosis() {
   const items = [
-    { n: "01", t: "Ingresos y estabilidad", d: "¿Qué pasaría si mañana no pudieras facturar? Aseguramos tu motor financiero principal.", img: 3 },
-    { n: "02", t: "Hipoteca y endeudamiento", d: "Revisión de condiciones y viabilidad para que tu casa sea un activo, no una carga.", img: 2 },
-    { n: "03", t: "Ahorro, pensión y protección", d: "Estrategias de largo plazo para que tu nivel de vida no dependa solo de tu trabajo actual.", img: 4 },
+    { n: "01", t: "Trayectoria consolidada", d: "20 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
+    { n: "02", t: "Criterio institucional", d: "Experiencia en alta dirección dentro de la administración local y autonómica, con conocimiento real del funcionamiento institucional.", img: 2 },
+    { n: "03", t: "Visión académica", d: "Profesora en la Facultad de Derecho de Alicante, con una visión técnica, académica y práctica del Derecho.", img: 4 },
   ];
   return (
     <section className="py-[100px]">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-24 space-y-6 max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
-            <Curtain>Antes de decidir, mira bien dónde estás expuesto</Curtain>
+            <Curtain>Experiencia jurídica, criterio institucional y visión práctica</Curtain>
           </h2>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -345,10 +345,10 @@ function Problem() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="lg:sticky lg:top-32 space-y-8">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <Curtain>La mayoría toma decisiones financieras demasiado tarde</Curtain>
+              <Curtain>Hay asuntos que exigen algo más que una respuesta legal</Curtain>
             </h2>
             <FadeUp delay={0.2}>
-              <p className="text-xl text-gray-400">Evitar los errores comunes es el primer paso para una economía sana. Mi trabajo es anticiparme a ellos.</p>
+              <p className="text-xl text-gray-400">Algunos problemas jurídicos requieren entender el contexto, valorar riesgos, anticipar consecuencias y diseñar una estrategia realista. Estos son los errores más frecuentes al afrontarlos.</p>
             </FadeUp>
           </div>
           <div className="space-y-12">
@@ -359,7 +359,7 @@ function Problem() {
                   transition={spring}
                   className="p-10 border border-white/10 hover:border-[#FF6B00] transition-colors"
                 >
-                  <span className="text-[#FF6B00] font-bold text-xs uppercase tracking-[0.2em] mb-6 block">Error Común {e.n}</span>
+                  <span className="text-[#FF6B00] font-bold text-xs uppercase tracking-[0.2em] mb-6 block">Error Frecuente {e.n}</span>
                   <h4 className="text-2xl font-bold mb-4">{e.title}</h4>
                   <p className="text-gray-400 leading-relaxed">{e.text}</p>
                 </motion.div>
@@ -378,10 +378,10 @@ function Services() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-24 space-y-6 max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            <Curtain>Soluciones para proteger tu economía</Curtain>
+            <Curtain>Áreas de asesoramiento jurídico</Curtain>
           </h2>
           <FadeUp delay={0.15}>
-            <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral para que todas las piezas de tu puzzle financiero encajen a la perfección.</p>
+            <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil e institucional con una visión estratégica y preventiva.</p>
           </FadeUp>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5]">
@@ -396,7 +396,7 @@ function Services() {
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors">{s.title}</h3>
                 <p className="text-[#4A4A4A] mb-10 group-hover:text-white/80 transition-colors">{s.text}</p>
                 <a className="text-xs font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-white transition-colors" href="#contact">
-                  Saber más <Icon name="arrow_forward" className="text-sm" />
+                  Consultar <Icon name="arrow_forward" className="text-sm" />
                 </a>
               </motion.div>
             </FadeUp>
@@ -414,7 +414,7 @@ function Method() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <Curtain>Decidir bien empieza por entender tu situación</Curtain>
+              <Curtain>Una forma de trabajar basada en análisis, claridad y estrategia</Curtain>
             </h2>
             <div className="space-y-12">
               {method.map((m, idx) => (
@@ -434,7 +434,7 @@ function Method() {
             <div className="relative overflow-hidden aspect-square">
               <motion.img
                 src={IMG(5)}
-                alt="Método de asesoramiento"
+                alt="Método de trabajo jurídico"
                 className="absolute inset-0 w-full h-full object-cover"
                 initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
@@ -444,7 +444,7 @@ function Method() {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 text-white space-y-2">
                 <Icon name="balance" className="text-white text-5xl" />
-                <p className="font-bold uppercase tracking-widest text-xs">Equilibrio Financiero</p>
+                <p className="font-bold uppercase tracking-widest text-xs">Rigor y Estrategia</p>
               </div>
             </div>
           </FadeUp>
@@ -470,7 +470,7 @@ function About() {
               />
               <div className="relative overflow-hidden">
                 <motion.img
-                  alt="José Carlos Hidalgo"
+                  alt="Verónica López"
                   className="w-full h-[600px] object-cover"
                   src={IMG(6)}
                   initial={{ scale: 1.08 }}
@@ -486,19 +486,20 @@ function About() {
             <FadeUp>
               <div className="space-y-4">
                 <span className="text-[#FF6B00] font-bold text-xs uppercase tracking-widest">SOBRE MÍ</span>
-                <h2 className="text-5xl font-bold tracking-tight">José Carlos Hidalgo Ortega</h2>
-                <p className="text-2xl font-medium text-[#FF6B00] italic">Tu compañero de viaje hacia la tranquilidad económica.</p>
+                <h2 className="text-5xl font-bold tracking-tight">Verónica López</h2>
+                <p className="text-2xl font-medium text-[#FF6B00] italic">Conocer la norma importa. Saber aplicarla con estrategia marca la diferencia.</p>
               </div>
             </FadeUp>
             <FadeUp delay={0.1}>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Soy asesor financiero, gestor hipotecario y administrador de fincas. Mi enfoque no es vender productos, sino gestionar personas y sus miedos financieros.</p>
-                <p>He visto a demasiadas familias sufrir por decisiones tomadas sin información. Mi misión es que tú seas el dueño de tus números, y no al revés.</p>
+                <p>Abogada con más de 20 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
+                <p>He ocupado puestos de alta dirección en la administración local y autonómica, lo que me permite conocer desde dentro el funcionamiento de las instituciones públicas y los procedimientos administrativos.</p>
+                <p>Mi experiencia como profesora en la Facultad de Derecho de Alicante aporta una visión técnica y académica: análisis profundo, explicación clara y estrategia bien fundamentada.</p>
               </div>
             </FadeUp>
             <FadeUp delay={0.2}>
               <div className="flex flex-wrap gap-3 pt-2">
-                {["Autónomos", "Familias", "Hipotecas", "Protección"].map((t) => (
+                {["Administrativo", "Civil", "Institucional", "Empresas"].map((t) => (
                   <motion.span
                     key={t}
                     whileHover={{ y: -2, backgroundColor: "#1A1A1A", color: "#FFFFFF" }}
@@ -513,7 +514,7 @@ function About() {
             <FadeUp delay={0.3}>
               <div className="flex items-center gap-4 text-[#1A1A1A] font-bold">
                 <Icon name="location_on" className="text-[#FF6B00]" />
-                <span className="text-sm uppercase tracking-widest">Alicante · Altea · Marina Baixa · Online</span>
+                <span className="text-sm uppercase tracking-widest">Alicante · Consultas Online</span>
               </div>
             </FadeUp>
           </div>
@@ -576,7 +577,7 @@ function Contact() {
     name: "",
     phone: "",
     email: "",
-    topic: "Diagnóstico General",
+    topic: "Consulta jurídica general",
     message: "",
   });
 
@@ -590,7 +591,7 @@ function Contact() {
     try {
       await submit({ data: form });
       setStatus("ok");
-      setForm({ name: "", phone: "", email: "", topic: "Diagnóstico General", message: "" });
+      setForm({ name: "", phone: "", email: "", topic: "Consulta jurídica general", message: "" });
     } catch (err) {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "No se ha podido enviar el formulario.");
@@ -602,16 +603,16 @@ function Contact() {
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
         <div className="space-y-12">
           <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
-            <Curtain>Hablemos de tu tranquilidad financiera</Curtain>
+            <Curtain>Hablemos de tu asunto</Curtain>
           </h2>
           <FadeUp delay={0.1}>
             <p className="text-xl text-[#4A4A4A] leading-relaxed">
-              Rellena el formulario y me pondré en contacto contigo en menos de 24 horas para agendar tu diagnóstico gratuito.
+              Si necesitas asesoramiento jurídico, rellena el formulario y explica brevemente tu situación. Revisaremos la información inicial y contactaremos contigo para valorar los siguientes pasos.
             </p>
           </FadeUp>
           <div className="space-y-10 pt-10 border-t border-[#E5E5E5]">
             {[
-              { i: "call", label: "Llámanos", v: PHONE_DISPLAY, href: `tel:+34${PHONE_DISPLAY.replace(/\s/g, "")}` },
+              { i: "call", label: "Teléfono", v: PHONE_DISPLAY, href: `tel:+34${PHONE_DISPLAY.replace(/\s/g, "")}` },
               { i: "mail", label: "Email", v: EMAIL, href: `mailto:${EMAIL}` },
             ].map((c, idx) => (
               <FadeUp key={c.i} delay={idx * 0.1}>
@@ -641,24 +642,25 @@ function Contact() {
             </div>
             <Field label="Email" type="email" placeholder="tu@email.com" value={form.email} onChange={onChange("email")} required />
             <div className="space-y-2">
-              <label className="text-[10px] font-black uppercase tracking-[0.2em]">¿Qué necesitas revisar?</label>
+              <label className="text-[10px] font-black uppercase tracking-[0.2em]">Tipo de asunto</label>
               <select
                 value={form.topic}
                 onChange={onChange("topic")}
                 className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#FF6B00] transition-colors outline-none"
               >
-                <option>Diagnóstico General</option>
-                <option>Nueva Hipoteca</option>
-                <option>Protección (Autónomos)</option>
-                <option>Plan de Jubilación</option>
-                <option>Administración de Fincas</option>
+                <option>Consulta jurídica general</option>
+                <option>Derecho administrativo</option>
+                <option>Derecho civil</option>
+                <option>Asesoramiento a empresas</option>
+                <option>Consultoría jurídica institucional</option>
+                <option>Otro asunto</option>
               </select>
             </div>
             <div className="space-y-2">
               <label className="text-[10px] font-black uppercase tracking-[0.2em]">Mensaje</label>
               <textarea
                 rows={4}
-                placeholder="Cuéntanos tu situación"
+                placeholder="Explica brevemente tu situación"
                 value={form.message}
                 onChange={onChange("message")}
                 className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#FF6B00] transition-colors outline-none placeholder:text-gray-300"
@@ -673,7 +675,7 @@ function Contact() {
               disabled={status === "sending"}
               className="w-full bg-[#FF6B00] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#FF6B00]/20 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {status === "sending" ? "Enviando…" : status === "ok" ? "¡Enviado!" : "Enviar Solicitud"}
+              {status === "sending" ? "Enviando…" : status === "ok" ? "¡Enviado!" : "Enviar consulta"}
             </motion.button>
 
             {status === "ok" && (
@@ -682,7 +684,7 @@ function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-sm text-[#1A1A1A] font-bold uppercase tracking-widest"
               >
-                Gracias. Te contactaré en menos de 24h.
+                Gracias. Hemos recibido tu consulta y contactaremos contigo a la mayor brevedad.
               </motion.p>
             )}
             {status === "error" && (
@@ -709,8 +711,8 @@ function Footer() {
           <div className="flex items-center gap-4 text-center md:text-left">
             <img src={LOGO} alt="Logo" className="h-10 w-10 object-contain invert" />
             <div className="space-y-2">
-              <div className="text-2xl font-black tracking-tighter uppercase">José Carlos Hidalgo</div>
-              <p className="text-gray-500 text-xs tracking-widest uppercase">Asesoría Financiera e Hipotecaria</p>
+              <div className="text-2xl font-black tracking-tighter uppercase">Verónica López</div>
+              <p className="text-gray-500 text-xs tracking-widest uppercase">Abogada · Administrativo · Civil · Institucional</p>
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-10">
@@ -723,7 +725,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-20 pt-10 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-widest">
-          © {new Date().getFullYear()} JOSÉ CARLOS HIDALGO. TODOS LOS DERECHOS RESERVADOS.
+          © {new Date().getFullYear()} VERÓNICA LÓPEZ. TODOS LOS DERECHOS RESERVADOS.
         </div>
       </div>
     </footer>
