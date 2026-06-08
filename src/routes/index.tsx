@@ -83,7 +83,7 @@ function Curtain({ children, className = "", delay = 0 }: { children: React.Reac
       </motion.div>
       <motion.div
         aria-hidden
-        className="absolute inset-0 bg-[#FF6B00] origin-bottom"
+        className="absolute inset-0 bg-[#C5A566] origin-bottom"
         variants={{
           hidden: { scaleY: 1 },
           visible: { scaleY: 0, transition: { duration: 1.05, ease: easeOutExpo, delay } },
@@ -111,7 +111,7 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
 
 function Index() {
   return (
-    <div className="bg-white text-[#1A1A1A] selection:bg-[#FF6B00] selection:text-white">
+    <div className="bg-white text-[#1A1A1A] selection:bg-[#C5A566] selection:text-white">
       <SmoothScroll />
       <Header />
 
@@ -160,8 +160,8 @@ function Header() {
               className="relative text-sm font-medium text-[#1A1A1A] group"
               href={h}
             >
-              <span className="transition-colors group-hover:text-[#FF6B00]">{l}</span>
-              <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#FF6B00] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
+              <span className="transition-colors group-hover:text-[#C5A566]">{l}</span>
+              <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#C5A566] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
             </a>
           ))}
         </div>
@@ -169,7 +169,7 @@ function Header() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           transition={spring}
-          className="bg-[#1A1A1A] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#FF6B00] transition-colors"
+          className="bg-[#1A1A1A] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#C5A566] transition-colors"
           href={WHATSAPP}
         >
           WhatsApp
@@ -191,12 +191,12 @@ function Hero() {
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <motion.div style={{ y: textY }} className="lg:col-span-7 space-y-10">
           <FadeUp>
-            <div className="inline-flex items-center gap-3 text-[#FF6B00] font-bold text-xs uppercase tracking-widest">
+            <div className="inline-flex items-center gap-3 text-[#C5A566] font-bold text-xs uppercase tracking-widest">
               <motion.span
                 initial={{ width: 0 }}
                 animate={{ width: 32 }}
                 transition={{ duration: 0.9, ease: easeOutExpo, delay: 0.4 }}
-                className="h-[2px] bg-[#FF6B00] block"
+                className="h-[2px] bg-[#C5A566] block"
               />
               ABOGADA · VISIÓN INSTITUCIONAL
             </div>
@@ -222,7 +222,7 @@ function Hero() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={spring}
-                className="bg-[#FF6B00] text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#1A1A1A] transition-colors shadow-xl shadow-[#FF6B00]/10"
+                className="bg-[#C5A566] text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#1A1A1A] transition-colors shadow-xl shadow-[#C5A566]/10"
                 href="#contact"
               >
                 Solicitar consulta
@@ -247,7 +247,7 @@ function Hero() {
             transition={{ ...spring, delay: 0.4 }}
             className="relative group"
           >
-            <div className="absolute -inset-4 border border-[#E5E5E5] -z-10 transition-colors duration-500 group-hover:border-[#FF6B00]" />
+            <div className="absolute -inset-4 border border-[#E5E5E5] -z-10 transition-colors duration-500 group-hover:border-[#C5A566]" />
             <div className="relative overflow-hidden">
               <motion.img
                 style={{ y: imgY, scale: imgScale }}
@@ -277,7 +277,7 @@ function TrustStats() {
           {items.map((s, idx) => (
             <FadeUp key={s.i} delay={idx * 0.1} className={idx === 0 ? "" : "md:pl-12"}>
               <div className="flex flex-col items-center md:items-start gap-4">
-                <Icon name={s.i} className="text-[#FF6B00] text-4xl" />
+                <Icon name={s.i} className="text-[#C5A566] text-4xl" />
                 <p className="text-sm font-bold uppercase tracking-wider text-center md:text-left">{s.t}</p>
               </div>
             </FadeUp>
@@ -306,7 +306,7 @@ function Diagnosis() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: easeOutExpo }}
-            className="w-20 h-2 bg-[#FF6B00] origin-left"
+            className="w-20 h-2 bg-[#C5A566] origin-left"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -324,7 +324,7 @@ function Diagnosis() {
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/55 to-transparent" />
                   <div className="absolute bottom-6 left-6 text-white">
-                    <div className="text-[#FF6B00] font-black text-2xl">{x.n}</div>
+                    <div className="text-[#C5A566] font-black text-2xl">{x.n}</div>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold">{x.t}</h3>
@@ -357,9 +357,9 @@ function Problem() {
                 <motion.div
                   whileHover={{ x: 8 }}
                   transition={spring}
-                  className="p-10 border border-white/10 hover:border-[#FF6B00] transition-colors"
+                  className="p-10 border border-white/10 hover:border-[#C5A566] transition-colors"
                 >
-                  <span className="text-[#FF6B00] font-bold text-xs uppercase tracking-[0.2em] mb-6 block">Error Frecuente {e.n}</span>
+                  <span className="text-[#C5A566] font-bold text-xs uppercase tracking-[0.2em] mb-6 block">Error Frecuente {e.n}</span>
                   <h4 className="text-2xl font-bold mb-4">{e.title}</h4>
                   <p className="text-gray-400 leading-relaxed">{e.text}</p>
                 </motion.div>
@@ -390,9 +390,9 @@ function Services() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={spring}
-                className="h-full bg-white p-12 hover:bg-[#FF6B00] group transition-colors"
+                className="h-full bg-white p-12 hover:bg-[#C5A566] group transition-colors"
               >
-                <Icon name={s.icon} className="text-[#FF6B00] text-4xl mb-8 group-hover:text-white transition-colors" />
+                <Icon name={s.icon} className="text-[#C5A566] text-4xl mb-8 group-hover:text-white transition-colors" />
                 <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors">{s.title}</h3>
                 <p className="text-[#4A4A4A] mb-10 group-hover:text-white/80 transition-colors">{s.text}</p>
                 <a className="text-xs font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-white transition-colors" href="#contact">
@@ -420,7 +420,7 @@ function Method() {
               {method.map((m, idx) => (
                 <FadeUp key={m.n} delay={idx * 0.1}>
                   <div className="flex gap-8">
-                    <span className="text-3xl font-black text-[#FF6B00]">{m.n}</span>
+                    <span className="text-3xl font-black text-[#C5A566]">{m.n}</span>
                     <div>
                       <h4 className="text-xl font-bold mb-2 uppercase tracking-tight">{m.title}</h4>
                       <p className="text-[#4A4A4A] leading-relaxed">{m.text}</p>
@@ -466,7 +466,7 @@ function About() {
                 whileInView={{ x: 16, y: 16 }}
                 whileHover={{ x: 0, y: 0 }}
                 transition={spring}
-                className="absolute inset-0 border border-[#FF6B00] -z-10"
+                className="absolute inset-0 border border-[#C5A566] -z-10"
               />
               <div className="relative overflow-hidden">
                 <motion.img
@@ -485,9 +485,9 @@ function About() {
           <div className="lg:col-span-7 space-y-10">
             <FadeUp>
               <div className="space-y-4">
-                <span className="text-[#FF6B00] font-bold text-xs uppercase tracking-widest">SOBRE MÍ</span>
+                <span className="text-[#C5A566] font-bold text-xs uppercase tracking-widest">SOBRE MÍ</span>
                 <h2 className="text-5xl font-bold tracking-tight">Verónica López</h2>
-                <p className="text-2xl font-medium text-[#FF6B00] italic">Conocer la norma importa. Saber aplicarla con estrategia marca la diferencia.</p>
+                <p className="text-2xl font-medium text-[#C5A566] italic">Conocer la norma importa. Saber aplicarla con estrategia marca la diferencia.</p>
               </div>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -513,7 +513,7 @@ function About() {
             </FadeUp>
             <FadeUp delay={0.3}>
               <div className="flex items-center gap-4 text-[#1A1A1A] font-bold">
-                <Icon name="location_on" className="text-[#FF6B00]" />
+                <Icon name="location_on" className="text-[#C5A566]" />
                 <span className="text-sm uppercase tracking-widest">Alicante · Consultas Online</span>
               </div>
             </FadeUp>
@@ -546,7 +546,7 @@ function FAQ() {
                     <motion.span
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={spring}
-                      className="material-symbols-outlined text-[#FF6B00]"
+                      className="material-symbols-outlined text-[#C5A566]"
                     >
                       expand_more
                     </motion.span>
@@ -622,7 +622,7 @@ function Contact() {
                   transition={spring}
                   className="flex items-center gap-8 group"
                 >
-                  <div className="w-16 h-16 bg-[#1A1A1A] flex items-center justify-center text-white group-hover:bg-[#FF6B00] transition-colors">
+                  <div className="w-16 h-16 bg-[#1A1A1A] flex items-center justify-center text-white group-hover:bg-[#C5A566] transition-colors">
                     <Icon name={c.i} />
                   </div>
                   <div>
@@ -646,7 +646,7 @@ function Contact() {
               <select
                 value={form.topic}
                 onChange={onChange("topic")}
-                className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#FF6B00] transition-colors outline-none"
+                className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#C5A566] transition-colors outline-none"
               >
                 <option>Consulta jurídica general</option>
                 <option>Derecho administrativo</option>
@@ -663,7 +663,7 @@ function Contact() {
                 placeholder="Explica brevemente tu situación"
                 value={form.message}
                 onChange={onChange("message")}
-                className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#FF6B00] transition-colors outline-none placeholder:text-gray-300"
+                className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#C5A566] transition-colors outline-none placeholder:text-gray-300"
               />
             </div>
 
@@ -673,7 +673,7 @@ function Contact() {
               transition={spring}
               type="submit"
               disabled={status === "sending"}
-              className="w-full bg-[#FF6B00] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#FF6B00]/20 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full bg-[#C5A566] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#C5A566]/20 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {status === "sending" ? "Enviando…" : status === "ok" ? "¡Enviado!" : "Enviar consulta"}
             </motion.button>
@@ -721,8 +721,8 @@ function Footer() {
               { l: "Términos", href: "/terminos.html" },
             ].map(({ l, href }) => (
               <a key={l} className="relative text-[10px] font-bold uppercase tracking-[0.2em] group" href={href} target="_blank" rel="noopener noreferrer">
-                <span className="transition-colors group-hover:text-[#FF6B00]">{l}</span>
-                <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#FF6B00] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
+                <span className="transition-colors group-hover:text-[#C5A566]">{l}</span>
+                <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#C5A566] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
               </a>
             ))}
           </div>
@@ -759,7 +759,7 @@ function Field({
         onChange={onChange}
         required={required}
         placeholder={placeholder}
-        className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#FF6B00] transition-colors outline-none placeholder:text-gray-300"
+        className="w-full bg-transparent border-0 border-b border-[#E5E5E5] px-0 py-4 focus:ring-0 focus:border-[#C5A566] transition-colors outline-none placeholder:text-gray-300"
       />
     </div>
   );
