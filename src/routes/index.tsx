@@ -17,9 +17,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const EMAIL = "josecarlos@hilolegal.es";
-const PHONE_DISPLAY = "647 50 60 40";
-const WHATSAPP = "https://wa.me/34647506040";
+const EMAIL = "veronicalopez@hilolegal.es";
+const PHONE_DISPLAY = "623 976 706";
+const WHATSAPP = "https://wa.me/34623976706";
 
 // Photos in /public
 const IMG = (n: number) => `/${n}.png`;
@@ -716,8 +716,11 @@ function Footer() {
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-10">
-            {["Privacidad", "Legal", "Cookies", "LinkedIn"].map((l) => (
-              <a key={l} className="relative text-[10px] font-bold uppercase tracking-[0.2em] group" href="#">
+            {[
+              { l: "Privacidad", href: "/privacidad.html" },
+              { l: "Términos", href: "/terminos.html" },
+            ].map(({ l, href }) => (
+              <a key={l} className="relative text-[10px] font-bold uppercase tracking-[0.2em] group" href={href} target="_blank" rel="noopener noreferrer">
                 <span className="transition-colors group-hover:text-[#FF6B00]">{l}</span>
                 <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#FF6B00] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
               </a>
