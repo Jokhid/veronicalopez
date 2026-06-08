@@ -192,7 +192,7 @@ function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
   return (
-    <section ref={ref} className="relative pt-20 pb-32 overflow-hidden border-b border-[#E5E5E5]">
+    <section ref={ref} className="relative pt-20 pb-32 overflow-hidden border-b border-white/10 bg-black text-white">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <motion.div style={{ y: textY }} className="lg:col-span-7 space-y-10">
           <FadeUp>
@@ -208,7 +208,11 @@ function Hero() {
           </FadeUp>
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight text-balance">
-            {["Abogada con visión", "institucional y 20 años", "de experiencia"].map((line, i) => (
+            {[
+              <><span className="text-[#C5A566]">Abogada</span> con visión</>,
+              "institucional y 20 años",
+              "de experiencia",
+            ].map((line, i) => (
               <Curtain key={i} delay={0.15 + i * 0.1} className="block">
                 <span className="block">{line}</span>
               </Curtain>
@@ -216,7 +220,7 @@ function Hero() {
           </h1>
 
           <FadeUp delay={0.6}>
-            <p className="text-xl text-[#4A4A4A] max-w-xl leading-relaxed">
+            <p className="text-xl text-white/70 max-w-xl leading-relaxed">
               Asesoramiento jurídico estratégico para particulares, empresas e instituciones que necesitan claridad, rigor y una visión completa antes de tomar decisiones importantes.
             </p>
           </FadeUp>
@@ -227,7 +231,7 @@ function Hero() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={spring}
-                className="bg-[#C5A566] text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#1A1A1A] transition-colors shadow-xl shadow-[#C5A566]/10"
+                className="bg-[#C5A566] text-black px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors shadow-xl shadow-[#C5A566]/20"
                 href="#contact"
               >
                 Solicitar consulta
@@ -236,7 +240,7 @@ function Hero() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={spring}
-                className="border border-[#1A1A1A] text-[#1A1A1A] px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-[#1A1A1A] hover:text-white transition-colors"
+                className="border border-white text-white px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-black transition-colors"
                 href="#about"
               >
                 Conocer trayectoria
