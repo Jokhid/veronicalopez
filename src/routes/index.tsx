@@ -143,7 +143,7 @@ function Header() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ ...spring, delay: 0.1 }}
-      className="sticky top-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10"
+      className="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-[#E5E5E5]"
     >
       <nav className="flex justify-between items-center w-full px-6 py-5 max-w-[1200px] mx-auto">
         <a className="flex items-center gap-3 group" href="#">
@@ -154,7 +154,7 @@ function Header() {
             whileHover={{ rotate: -6, scale: 1.05 }}
             transition={spring}
           />
-          <span className="text-base md:text-lg font-bold tracking-tight uppercase text-white">
+          <span className="text-base md:text-lg font-bold tracking-tight uppercase text-[#1A1A1A]">
             Verónica López
           </span>
         </a>
@@ -162,7 +162,7 @@ function Header() {
           {[["Áreas", "#services"], ["Método", "#method"], ["Sobre mí", "#about"], ["FAQ", "#faq"], ["Contacto", "#contact"]].map(([l, h]) => (
             <a
               key={h}
-              className="relative text-sm font-medium text-white group"
+              className="relative text-sm font-medium text-[#1A1A1A] group"
               href={h}
             >
               <span className="transition-colors group-hover:text-[#C5A566]">{l}</span>
@@ -174,7 +174,7 @@ function Header() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           transition={spring}
-          className="bg-[#C5A566] text-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors"
+          className="bg-[#1A1A1A] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#C5A566] transition-colors"
           href={WHATSAPP}
         >
           WhatsApp
