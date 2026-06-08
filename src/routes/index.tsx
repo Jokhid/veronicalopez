@@ -718,9 +718,7 @@ function Footer() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-16">
           <div className="flex items-center gap-4 text-center md:text-left">
-            <span className="inline-flex items-center justify-center h-10 w-10 bg-transparent text-white">
-              <LogoMark className="text-2xl" />
-            </span>
+            <img src="/logo-white.png" alt="Logo Verónica López" className="h-12 w-12 object-contain" />
             <div className="space-y-2">
               <div className="text-2xl font-black tracking-tighter uppercase">Verónica López</div>
               <p className="text-gray-500 text-xs tracking-widest uppercase">Abogada · Administrativo · Civil · Institucional</p>
