@@ -143,18 +143,18 @@ function Header() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ ...spring, delay: 0.1 }}
-      className="sticky top-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10"
+      className="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-[#E5E5E5]"
     >
       <nav className="flex justify-between items-center w-full px-6 py-5 max-w-[1200px] mx-auto">
         <a className="flex items-center gap-3 group" href="#">
-          <motion.span
+          <motion.img
+            src="/logo.png"
+            alt="Logo Verónica López"
+            className="h-10 w-10 object-contain"
             whileHover={{ rotate: -6, scale: 1.05 }}
             transition={spring}
-            className="inline-flex items-center justify-center h-9 w-9 bg-white text-black rounded-sm"
-          >
-            <LogoMark className="text-xl" />
-          </motion.span>
-          <span className="text-base md:text-lg font-bold tracking-tight uppercase text-white">
+          />
+          <span className="text-base md:text-lg font-bold tracking-tight uppercase text-[#1A1A1A]">
             Verónica López
           </span>
         </a>
@@ -162,7 +162,7 @@ function Header() {
           {[["Áreas", "#services"], ["Método", "#method"], ["Sobre mí", "#about"], ["FAQ", "#faq"], ["Contacto", "#contact"]].map(([l, h]) => (
             <a
               key={h}
-              className="relative text-sm font-medium text-white group"
+              className="relative text-sm font-medium text-[#1A1A1A] group"
               href={h}
             >
               <span className="transition-colors group-hover:text-[#C5A566]">{l}</span>
@@ -174,7 +174,7 @@ function Header() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           transition={spring}
-          className="bg-[#C5A566] text-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors"
+          className="bg-[#1A1A1A] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#C5A566] transition-colors"
           href={WHATSAPP}
         >
           WhatsApp
@@ -718,9 +718,7 @@ function Footer() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-16">
           <div className="flex items-center gap-4 text-center md:text-left">
-            <span className="inline-flex items-center justify-center h-10 w-10 bg-transparent text-white">
-              <LogoMark className="text-2xl" />
-            </span>
+            <img src="/logo-white.png" alt="Logo Verónica López" className="h-12 w-12 object-contain" />
             <div className="space-y-2">
               <div className="text-2xl font-black tracking-tighter uppercase">Verónica López</div>
               <p className="text-gray-500 text-xs tracking-widest uppercase">Abogada · Administrativo · Civil · Institucional</p>
