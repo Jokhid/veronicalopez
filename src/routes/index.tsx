@@ -23,7 +23,12 @@ const WHATSAPP = "https://wa.me/34623976706";
 
 // Photos in /public
 const IMG = (n: number) => `/${n}.png`;
-const LOGO = "/logo.png";
+
+const LogoMark = ({ className = "", dotClassName = "" }: { className?: string; dotClassName?: string }) => (
+  <span className={`font-black tracking-tighter leading-none ${className}`}>
+    VL<span className={dotClassName} style={{ color: "#C5A566" }}>.</span>
+  </span>
+);
 
 const Icon = ({ name, className = "" }: { name: string; className?: string }) => (
   <span className={`material-symbols-outlined ${className}`}>{name}</span>
