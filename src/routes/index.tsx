@@ -143,18 +143,18 @@ function Header() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ ...spring, delay: 0.1 }}
-      className="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-[#E5E5E5]"
+      className="sticky top-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10"
     >
       <nav className="flex justify-between items-center w-full px-6 py-5 max-w-[1200px] mx-auto">
         <a className="flex items-center gap-3 group" href="#">
-          <motion.img
-            src={LOGO}
-            alt="Logo Verónica López"
-            className="h-9 w-9 object-contain"
+          <motion.span
             whileHover={{ rotate: -6, scale: 1.05 }}
             transition={spring}
-          />
-          <span className="text-base md:text-lg font-bold tracking-tight uppercase">
+            className="inline-flex items-center justify-center h-9 w-9 bg-white text-black rounded-sm"
+          >
+            <LogoMark className="text-xl" />
+          </motion.span>
+          <span className="text-base md:text-lg font-bold tracking-tight uppercase text-white">
             Verónica López
           </span>
         </a>
@@ -162,11 +162,11 @@ function Header() {
           {[["Áreas", "#services"], ["Método", "#method"], ["Sobre mí", "#about"], ["FAQ", "#faq"], ["Contacto", "#contact"]].map(([l, h]) => (
             <a
               key={h}
-              className="relative text-sm font-medium text-[#1A1A1A] group"
+              className="relative text-sm font-medium text-white group"
               href={h}
             >
               <span className="transition-colors group-hover:text-[#C5A566]">{l}</span>
-              <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#C5A566] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
+              <span className="absolute left:0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#C5A566] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
             </a>
           ))}
         </div>
@@ -174,7 +174,7 @@ function Header() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           transition={spring}
-          className="bg-[#1A1A1A] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#C5A566] transition-colors"
+          className="bg-[#C5A566] text-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors"
           href={WHATSAPP}
         >
           WhatsApp
