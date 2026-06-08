@@ -17,9 +17,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const EMAIL = "josecarlos@hilolegal.es";
-const PHONE_DISPLAY = "647 50 60 40";
-const WHATSAPP = "https://wa.me/34647506040";
+const EMAIL = "veronicalopez@hilolegal.es";
+const PHONE_DISPLAY = "623 976 706";
+const WHATSAPP = "https://wa.me/34623976706";
 
 // Photos in /public
 const IMG = (n: number) => `/${n}.png`;
