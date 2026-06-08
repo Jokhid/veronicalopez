@@ -166,7 +166,7 @@ function Header() {
               href={h}
             >
               <span className="transition-colors group-hover:text-[#C5A566]">{l}</span>
-              <span className="absolute left:0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#C5A566] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
+              <span className="absolute left-0 -bottom-1 h-[1px] w-full origin-left scale-x-0 bg-[#C5A566] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
             </a>
           ))}
         </div>
