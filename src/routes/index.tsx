@@ -147,13 +147,13 @@ function Header() {
     >
       <nav className="flex justify-between items-center w-full px-6 py-5 max-w-[1200px] mx-auto">
         <a className="flex items-center gap-3 group" href="#">
-          <motion.span
+          <motion.img
+            src="/logo.png"
+            alt="Logo Verónica López"
+            className="h-10 w-10 object-contain"
             whileHover={{ rotate: -6, scale: 1.05 }}
             transition={spring}
-            className="inline-flex items-center justify-center h-9 w-9 bg-white text-black rounded-sm"
-          >
-            <LogoMark className="text-xl" />
-          </motion.span>
+          />
           <span className="text-base md:text-lg font-bold tracking-tight uppercase text-white">
             Verónica López
           </span>
