@@ -418,7 +418,7 @@ function Services() {
 
 function Method() {
   return (
-    <section id="method" className="py-[100px] border-y border-[#E5E5E5]">
+    <section id="method" className="py-[100px] bg-[#F4EFEA] border-y border-[#E5E5E5]">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-12">
