@@ -128,6 +128,7 @@ function Index() {
         <Services />
         <Method />
         <About />
+        <HiloLegal />
         <FAQ />
         <Contact />
       </main>
