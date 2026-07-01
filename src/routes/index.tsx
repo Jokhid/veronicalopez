@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
-      { name: "description", content: "Abogada con 20 años de experiencia, visión institucional y trayectoria en alta dirección pública. Asesoramiento jurídico estratégico para particulares, empresas e instituciones en Alicante." },
+      { name: "description", content: "Abogada con más de 15 años de experiencia, visión institucional y trayectoria en alta dirección pública. Asesoramiento jurídico estratégico para particulares, empresas e instituciones en Alicante." },
       { property: "og:title", content: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
       { property: "og:description", content: "Asesoramiento jurídico estratégico en derecho administrativo, civil e institucional. 20 años de experiencia y visión institucional." },
     ],
@@ -275,7 +275,7 @@ function Hero() {
 
 function TrustStats() {
   const items = [
-    { i: "workspace_premium", t: "20 años de ejercicio profesional" },
+    { i: "workspace_premium", t: "15 años de ejercicio profesional" },
     { i: "account_balance", t: "Alta dirección pública" },
     { i: "school", t: "Docencia en la Facultad de Derecho" },
   ];
@@ -299,7 +299,7 @@ function TrustStats() {
 
 function Diagnosis() {
   const items = [
-    { n: "01", t: "Trayectoria consolidada", d: "20 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
+    { n: "01", t: "Trayectoria consolidada", d: "15 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
     { n: "02", t: "Criterio institucional", d: "Experiencia en alta dirección dentro de la administración local y autonómica, con conocimiento real del funcionamiento institucional.", img: 2 },
     { n: "03", t: "Visión académica", d: "Profesora en la Facultad de Derecho de Alicante, con una visión técnica, académica y práctica del Derecho.", img: 4 },
   ];
@@ -501,7 +501,7 @@ function About() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Abogada con más de 20 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
+                <p>Abogada con más de 15 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
                 <p>He ocupado puestos de alta dirección en la administración local y autonómica, lo que me permite conocer desde dentro el funcionamiento de las instituciones públicas y los procedimientos administrativos.</p>
                 <p>Mi experiencia como profesora en la Facultad de Derecho de Alicante aporta una visión técnica y académica: análisis profundo, explicación clara y estrategia bien fundamentada.</p>
               </div>
@@ -523,7 +523,7 @@ function About() {
             <FadeUp delay={0.3}>
               <div className="flex items-center gap-4 text-[#1A1A1A] font-bold">
                 <Icon name="location_on" className="text-[#C5A566]" />
-                <span className="text-sm uppercase tracking-widest">Alicante · Consultas Online</span>
+                <span className="text-sm uppercase tracking-widest">Altea · Costa Blanca · Alicante</span>
               </div>
             </FadeUp>
           </div>
