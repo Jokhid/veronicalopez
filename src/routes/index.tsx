@@ -8,10 +8,10 @@ import { submitContact } from "@/lib/contact.functions";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
-      { name: "description", content: "Abogada con 20 años de experiencia, visión institucional y trayectoria en alta dirección pública. Asesoramiento jurídico estratégico para particulares, empresas e instituciones en Alicante." },
-      { property: "og:title", content: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
-      { property: "og:description", content: "Asesoramiento jurídico estratégico en derecho administrativo, civil e institucional. 20 años de experiencia y visión institucional." },
+      { title: "Verónica López Ramón | Abogada en Altea · Costa Blanca · Alicante" },
+      { name: "description", content: "Abogada con experiencia en alta dirección pública, docencia universitaria y ejercicio privado. Derecho civil, administrativo, familia y comunidades. Consulta en Altea." },
+      { property: "og:title", content: "Verónica López Ramón | Abogada en Altea · Costa Blanca · Alicante" },
+      { property: "og:description", content: "Abogada con experiencia en alta dirección pública, docencia universitaria y ejercicio privado. Derecho civil, administrativo, familia y comunidades. Consulta en Altea." },
     ],
   }),
   component: Index,
@@ -35,11 +35,11 @@ const Icon = ({ name, className = "" }: { name: string; className?: string }) =>
 );
 
 const services = [
-  { icon: "account_balance", title: "Derecho administrativo", text: "Asesoramiento y defensa en procedimientos administrativos, recursos, responsabilidad patrimonial, contratación pública, expedientes sancionadores y relaciones con la Administración." },
-  { icon: "gavel", title: "Derecho civil", text: "Contratos, reclamaciones, conflictos patrimoniales, responsabilidad civil, obligaciones y defensa de derechos e intereses particulares o profesionales." },
-  { icon: "domain", title: "Derecho público e institucional", text: "Asesoramiento jurídico a entidades, profesionales y responsables públicos en asuntos con impacto administrativo, organizativo o institucional." },
+  { icon: "account_balance", title: "Derecho administrativo y relaciones con la Administración", text: "Asesoramiento y defensa en procedimientos administrativos, recursos, responsabilidad patrimonial, contratación pública, expedientes sancionadores y relaciones con la Administración." },
+  { icon: "gavel", title: "Derecho civil y de familia", text: "Divorcios, herencias, contratos, reclamaciones. Sin dramatismo innecesario, con honestidad sobre plazos y resultados. Porque a veces el mejor abogado es el que te dice lo que no quieres escuchar antes de que sea demasiado tarde." },
+  { icon: "home", title: "Inmobiliario y comunidades", text: "Compraventas, arrendamientos, reclamaciones de comunidades de propietarios. Trabajo en coordinación con el área de administración de fincas de HiloLegal para ofrecer una solución integral cuando el problema es tanto jurídico como de gestión." },
   { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
-  { icon: "business_center", title: "Asesoramiento a empresas y profesionales", text: "Apoyo jurídico en conflictos, contratación, relaciones con terceros, reclamaciones, cumplimiento y toma de decisiones con trascendencia legal." },
+  { icon: "balance", title: "Derecho penal", text: "Defensa y representación en procedimientos penales. Claridad total sobre el proceso, sin promesas que no se pueden cumplir." },
   { icon: "psychology", title: "Consultoría jurídica especializada", text: "Informes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
 ];
 
@@ -124,10 +124,11 @@ function Index() {
         <Hero />
         <TrustStats />
         <Diagnosis />
-        <Problem />
+        <Differentiation />
         <Services />
         <Method />
         <About />
+        <HiloLegal />
         <FAQ />
         <Contact />
       </main>
@@ -209,9 +210,8 @@ function Hero() {
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight text-balance">
             {[
-              <><span className="text-[#C5A566]">Abogada</span> con visión</>,
-              "institucional y 20 años",
-              "de experiencia",
+              "Derecho con criterio.",
+              "Experiencia que viene de dentro.",
             ].map((line, i) => (
               <Curtain key={i} delay={0.15 + i * 0.1} className="block">
                 <span className="block">{line}</span>
@@ -221,7 +221,7 @@ function Hero() {
 
           <FadeUp delay={0.6}>
             <p className="text-xl text-white/70 max-w-xl leading-relaxed">
-              Asesoramiento jurídico estratégico para particulares, empresas e instituciones que necesitan claridad, rigor y una visión completa antes de tomar decisiones importantes.
+              Abogada en ejercicio, más de 15 años de experiencia en alta dirección en la Administración Pública de la Comunitat Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Cuando te asesoro, no solo sé qué dice la ley. Sé cómo se aplica.
             </p>
           </FadeUp>
 
@@ -234,7 +234,7 @@ function Hero() {
                 className="bg-[#C5A566] text-black px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors shadow-xl shadow-[#C5A566]/20"
                 href="#contact"
               >
-                Solicitar consulta
+                Primera consulta
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.03 }}
@@ -275,7 +275,7 @@ function Hero() {
 
 function TrustStats() {
   const items = [
-    { i: "workspace_premium", t: "20 años de ejercicio profesional" },
+    { i: "workspace_premium", t: "15 años de ejercicio profesional" },
     { i: "account_balance", t: "Alta dirección pública" },
     { i: "school", t: "Docencia en la Facultad de Derecho" },
   ];
@@ -299,7 +299,7 @@ function TrustStats() {
 
 function Diagnosis() {
   const items = [
-    { n: "01", t: "Trayectoria consolidada", d: "20 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
+    { n: "01", t: "Trayectoria consolidada", d: "15 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
     { n: "02", t: "Criterio institucional", d: "Experiencia en alta dirección dentro de la administración local y autonómica, con conocimiento real del funcionamiento institucional.", img: 2 },
     { n: "03", t: "Visión académica", d: "Profesora en la Facultad de Derecho de Alicante, con una visión técnica, académica y práctica del Derecho.", img: 4 },
   ];
@@ -347,34 +347,21 @@ function Diagnosis() {
   );
 }
 
-function Problem() {
+function Differentiation() {
   return (
     <section className="py-[100px] bg-[#1A1A1A] text-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="lg:sticky lg:top-32 space-y-8">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <Curtain>Hay asuntos que exigen algo más que una respuesta legal</Curtain>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
+              <Curtain>Hay abogados que conocen la ley. Pocos la han aplicado desde ambos lados.</Curtain>
             </h2>
-            <FadeUp delay={0.2}>
-              <p className="text-xl text-gray-400">Algunos problemas jurídicos requieren entender el contexto, valorar riesgos, anticipar consecuencias y diseñar una estrategia realista. Estos son los errores más frecuentes al afrontarlos.</p>
-            </FadeUp>
           </div>
-          <div className="space-y-12">
-            {errors.map((e, idx) => (
-              <FadeUp key={e.n} delay={idx * 0.1}>
-                <motion.div
-                  whileHover={{ x: 8 }}
-                  transition={spring}
-                  className="p-10 border border-white/10 hover:border-[#C5A566] transition-colors"
-                >
-                  <span className="text-[#C5A566] font-bold text-xs uppercase tracking-[0.2em] mb-6 block">Error Frecuente {e.n}</span>
-                  <h4 className="text-2xl font-bold mb-4">{e.title}</h4>
-                  <p className="text-gray-400 leading-relaxed">{e.text}</p>
-                </motion.div>
-              </FadeUp>
-            ))}
-          </div>
+          <FadeUp delay={0.1}>
+            <div className="space-y-8 text-xl text-gray-300 leading-relaxed">
+              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.</p>
+            </div>
+          </FadeUp>
         </div>
       </div>
     </section>
@@ -501,7 +488,7 @@ function About() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Abogada con más de 20 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
+                <p>Abogada con más de 15 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
                 <p>He ocupado puestos de alta dirección en la administración local y autonómica, lo que me permite conocer desde dentro el funcionamiento de las instituciones públicas y los procedimientos administrativos.</p>
                 <p>Mi experiencia como profesora en la Facultad de Derecho de Alicante aporta una visión técnica y académica: análisis profundo, explicación clara y estrategia bien fundamentada.</p>
               </div>
@@ -523,10 +510,60 @@ function About() {
             <FadeUp delay={0.3}>
               <div className="flex items-center gap-4 text-[#1A1A1A] font-bold">
                 <Icon name="location_on" className="text-[#C5A566]" />
-                <span className="text-sm uppercase tracking-widest">Alicante · Consultas Online</span>
+                <span className="text-sm uppercase tracking-widest">Altea · Costa Blanca · Alicante</span>
               </div>
             </FadeUp>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HiloLegal() {
+  return (
+    <section className="py-[100px] bg-[#F4EFEA] border-y border-[#E5E5E5]">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <FadeUp>
+            <div className="space-y-8">
+              <span className="text-[#C5A566] font-bold text-xs uppercase tracking-widest">PARTE DE HILOLEGAL</span>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                <Curtain>Una firma, dos especialistas</Curtain>
+              </h2>
+              <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
+                <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, Administrador de fincas y especialista en hipotecas y finanzas personales. Cuando un cliente necesita asesoramiento legal y financiero al mismo tiempo — que es más frecuente de lo que parece — trabajamos coordinados.</p>
+                <p>Una firma, dos especialistas, sin que tengas que empezar desde cero con cada uno.</p>
+              </div>
+              <motion.a
+                href="https://josecarloshidalgo.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4 }}
+                transition={spring}
+                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#C5A566] hover:text-[#1A1A1A] transition-colors"
+              >
+                Conocer a José Carlos <Icon name="arrow_forward" className="text-sm" />
+              </motion.a>
+            </div>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <div className="relative overflow-hidden aspect-[4/3]">
+              <motion.img
+                src={IMG(2)}
+                alt="HiloLegal"
+                className="absolute inset-0 w-full h-full object-cover"
+                initial={{ scale: 1.1 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.4, ease: easeOutExpo }}
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-white space-y-2">
+                <p className="font-bold uppercase tracking-widest text-xs">HiloLegal</p>
+              </div>
+            </div>
+          </FadeUp>
         </div>
       </div>
     </section>
