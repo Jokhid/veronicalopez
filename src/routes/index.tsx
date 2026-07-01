@@ -346,34 +346,21 @@ function Diagnosis() {
   );
 }
 
-function Problem() {
+function Differentiation() {
   return (
     <section className="py-[100px] bg-[#1A1A1A] text-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="lg:sticky lg:top-32 space-y-8">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <Curtain>Hay asuntos que exigen algo más que una respuesta legal</Curtain>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
+              <Curtain>Hay abogados que conocen la ley. Pocos la han aplicado desde ambos lados.</Curtain>
             </h2>
-            <FadeUp delay={0.2}>
-              <p className="text-xl text-gray-400">Algunos problemas jurídicos requieren entender el contexto, valorar riesgos, anticipar consecuencias y diseñar una estrategia realista. Estos son los errores más frecuentes al afrontarlos.</p>
-            </FadeUp>
           </div>
-          <div className="space-y-12">
-            {errors.map((e, idx) => (
-              <FadeUp key={e.n} delay={idx * 0.1}>
-                <motion.div
-                  whileHover={{ x: 8 }}
-                  transition={spring}
-                  className="p-10 border border-white/10 hover:border-[#C5A566] transition-colors"
-                >
-                  <span className="text-[#C5A566] font-bold text-xs uppercase tracking-[0.2em] mb-6 block">Error Frecuente {e.n}</span>
-                  <h4 className="text-2xl font-bold mb-4">{e.title}</h4>
-                  <p className="text-gray-400 leading-relaxed">{e.text}</p>
-                </motion.div>
-              </FadeUp>
-            ))}
-          </div>
+          <FadeUp delay={0.1}>
+            <div className="space-y-8 text-xl text-gray-300 leading-relaxed">
+              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.</p>
+            </div>
+          </FadeUp>
         </div>
       </div>
     </section>
