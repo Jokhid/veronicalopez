@@ -529,7 +529,7 @@ function HiloLegal() {
             <div className="space-y-8">
               <span className="text-[#C5A566] font-bold text-xs uppercase tracking-widest">PARTE DE HILOLEGAL</span>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-                <Curtrrent>Una firma, dos especialistas</Curtrrent>
+                <Curtain>Una firma, dos especialistas</Curtain>
               </h2>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
                 <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, Administrador de fincas y especialista en hipotecas y finanzas personales. Cuando un cliente necesita asesoramiento legal y financiero al mismo tiempo — que es más frecuente de lo que parece — trabajamos coordinados.</p>
