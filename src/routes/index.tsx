@@ -8,10 +8,10 @@ import { submitContact } from "@/lib/contact.functions";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
-      { name: "description", content: "Abogada con más de 15 años de experiencia, visión institucional y trayectoria en alta dirección pública. Asesoramiento jurídico estratégico para particulares, empresas e instituciones en Alicante." },
-      { property: "og:title", content: "Verónica López Abogada | Derecho Administrativo, Civil e Institucional en Alicante" },
-      { property: "og:description", content: "Asesoramiento jurídico estratégico en derecho administrativo, civil e institucional. 20 años de experiencia y visión institucional." },
+      { title: "Verónica López Ramón | Abogada en Altea · Costa Blanca · Alicante" },
+      { name: "description", content: "Abogada con experiencia en alta dirección pública, docencia universitaria y ejercicio privado. Derecho civil, administrativo, familia y comunidades. Consulta en Altea." },
+      { property: "og:title", content: "Verónica López Ramón | Abogada en Altea · Costa Blanca · Alicante" },
+      { property: "og:description", content: "Abogada con experiencia en alta dirección pública, docencia universitaria y ejercicio privado. Derecho civil, administrativo, familia y comunidades. Consulta en Altea." },
     ],
   }),
   component: Index,
