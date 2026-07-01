@@ -520,6 +520,56 @@ function About() {
   );
 }
 
+function HiloLegal() {
+  return (
+    <section className="py-[100px] bg-[#F4EFEA] border-y border-[#E5E5E5]">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <FadeUp>
+            <div className="space-y-8">
+              <span className="text-[#C5A566] font-bold text-xs uppercase tracking-widest">PARTE DE HILOLEGAL</span>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                <Curtrrent>Una firma, dos especialistas</Curtrrent>
+              </h2>
+              <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
+                <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, Administrador de fincas y especialista en hipotecas y finanzas personales. Cuando un cliente necesita asesoramiento legal y financiero al mismo tiempo — que es más frecuente de lo que parece — trabajamos coordinados.</p>
+                <p>Una firma, dos especialistas, sin que tengas que empezar desde cero con cada uno.</p>
+              </div>
+              <motion.a
+                href="https://josecarloshidalgo.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4 }}
+                transition={spring}
+                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#C5A566] hover:text-[#1A1A1A] transition-colors"
+              >
+                Conocer a José Carlos <Icon name="arrow_forward" className="text-sm" />
+              </motion.a>
+            </div>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <div className="relative overflow-hidden aspect-[4/3]">
+              <motion.img
+                src={IMG(2)}
+                alt="HiloLegal"
+                className="absolute inset-0 w-full h-full object-cover"
+                initial={{ scale: 1.1 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.4, ease: easeOutExpo }}
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-white space-y-2">
+                <p className="font-bold uppercase tracking-widest text-xs">HiloLegal</p>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
