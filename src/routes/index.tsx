@@ -209,9 +209,8 @@ function Hero() {
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight text-balance">
             {[
-              <><span className="text-[#C5A566]">Abogada</span> con visión</>,
-              "institucional y 20 años",
-              "de experiencia",
+              "Derecho con criterio.",
+              "Experiencia que viene de dentro.",
             ].map((line, i) => (
               <Curtain key={i} delay={0.15 + i * 0.1} className="block">
                 <span className="block">{line}</span>
@@ -221,7 +220,7 @@ function Hero() {
 
           <FadeUp delay={0.6}>
             <p className="text-xl text-white/70 max-w-xl leading-relaxed">
-              Asesoramiento jurídico estratégico para particulares, empresas e instituciones que necesitan claridad, rigor y una visión completa antes de tomar decisiones importantes.
+              Abogada en ejercicio, más de 15 años de experiencia en alta dirección en la Administración Pública de la Comunitat Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Cuando te asesoro, no solo sé qué dice la ley. Sé cómo se aplica.
             </p>
           </FadeUp>
 
@@ -234,7 +233,7 @@ function Hero() {
                 className="bg-[#C5A566] text-black px-10 py-5 font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors shadow-xl shadow-[#C5A566]/20"
                 href="#contact"
               >
-                Solicitar consulta
+                Primera consulta
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.03 }}
