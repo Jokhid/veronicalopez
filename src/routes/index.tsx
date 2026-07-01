@@ -35,11 +35,11 @@ const Icon = ({ name, className = "" }: { name: string; className?: string }) =>
 );
 
 const services = [
-  { icon: "account_balance", title: "Derecho administrativo", text: "Asesoramiento y defensa en procedimientos administrativos, recursos, responsabilidad patrimonial, contratación pública, expedientes sancionadores y relaciones con la Administración." },
-  { icon: "gavel", title: "Derecho civil", text: "Contratos, reclamaciones, conflictos patrimoniales, responsabilidad civil, obligaciones y defensa de derechos e intereses particulares o profesionales." },
-  { icon: "domain", title: "Derecho público e institucional", text: "Asesoramiento jurídico a entidades, profesionales y responsables públicos en asuntos con impacto administrativo, organizativo o institucional." },
+  { icon: "account_balance", title: "Derecho administrativo y relaciones con la Administración", text: "Asesoramiento y defensa en procedimientos administrativos, recursos, responsabilidad patrimonial, contratación pública, expedientes sancionadores y relaciones con la Administración." },
+  { icon: "gavel", title: "Derecho civil y de familia", text: "Divorcios, herencias, contratos, reclamaciones. Sin dramatismo innecesario, con honestidad sobre plazos y resultados. Porque a veces el mejor abogado es el que te dice lo que no quieres escuchar antes de que sea demasiado tarde." },
+  { icon: "home", title: "Inmobiliario y comunidades", text: "Compraventas, arrendamientos, reclamaciones de comunidades de propietarios. Trabajo en coordinación con el área de administración de fincas de HiloLegal para ofrecer una solución integral cuando el problema es tanto jurídico como de gestión." },
   { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
-  { icon: "business_center", title: "Asesoramiento a empresas y profesionales", text: "Apoyo jurídico en conflictos, contratación, relaciones con terceros, reclamaciones, cumplimiento y toma de decisiones con trascendencia legal." },
+  { icon: "balance", title: "Derecho penal", text: "Defensa y representación en procedimientos penales. Claridad total sobre el proceso, sin promesas que no se pueden cumplir." },
   { icon: "psychology", title: "Consultoría jurídica especializada", text: "Informes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
 ];
 
