@@ -124,7 +124,7 @@ function Index() {
         <Hero />
         <TrustStats />
         <Diagnosis />
-        <Problem />
+        <Differentiation />
         <Services />
         <Method />
         <About />
