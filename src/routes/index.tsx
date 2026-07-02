@@ -492,7 +492,7 @@ function About() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Abogada con más de 15 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
+                <p>Abogada con más de 20 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
                 <p>He ocupado puestos de alta dirección en la administración local y autonómica, lo que me permite conocer desde dentro el funcionamiento de las instituciones públicas y los procedimientos administrativos.</p>
                 <p>Mi experiencia como profesora en la Facultad de Derecho de Alicante aporta una visión técnica y académica: análisis profundo, explicación clara y estrategia bien fundamentada.</p>
               </div>
