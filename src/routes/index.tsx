@@ -275,7 +275,7 @@ function Hero() {
 
 function TrustStats() {
   const items = [
-    { i: "workspace_premium", t: "15 años de ejercicio profesional" },
+    { i: "workspace_premium", t: "20 AÑOS DE EJERCICIO PROFESIONAL" },
     { i: "account_balance", t: "Alta dirección pública" },
     { i: "school", t: "Docencia en la Facultad de Derecho" },
   ];
