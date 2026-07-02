@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { useRef, useState } from "react";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { submitContact } from "@/lib/contact.functions";
+import banner3Asset from "@/assets/banner3.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -540,7 +541,7 @@ function HiloLegal() {
                 <p>Una firma, dos especialistas, sin que tengas que empezar desde cero con cada uno.</p>
               </div>
               <motion.a
-                href="https://josecarloshidalgo.lovable.app"
+                href="https://josecarlos.hilolegal.es/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 4 }}
@@ -554,7 +555,7 @@ function HiloLegal() {
           <FadeUp delay={0.1}>
             <div className="relative overflow-hidden aspect-[4/3]">
               <motion.img
-                src={IMG(2)}
+                src={banner3Asset.url}
                 alt="HiloLegal"
                 className="absolute inset-0 w-full h-full object-cover"
                 initial={{ scale: 1.1 }}
