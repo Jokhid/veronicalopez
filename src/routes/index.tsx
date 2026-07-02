@@ -299,7 +299,7 @@ function TrustStats() {
 
 function Diagnosis() {
   const items = [
-    { n: "01", t: "Trayectoria consolidada", d: "15 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
+    { n: "01", t: "Trayectoria consolidada", d: "20 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
     { n: "02", t: "Criterio institucional", d: "Experiencia en alta dirección dentro de la administración local y autonómica, con conocimiento real del funcionamiento institucional.", img: 2 },
     { n: "03", t: "Visión académica", d: "Profesora en la Facultad de Derecho de Alicante, con una visión técnica, académica y práctica del Derecho.", img: 4 },
   ];
