@@ -211,7 +211,7 @@ function Hero() {
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight text-balance">
             {[
               "Derecho con criterio.",
-              "Experiencia que viene de dentro.",
+              "La experiencia desde dentro.",
             ].map((line, i) => (
               <Curtain key={i} delay={0.15 + i * 0.1} className="block">
                 <span className="block">{line}</span>
@@ -221,7 +221,7 @@ function Hero() {
 
           <FadeUp delay={0.6}>
             <p className="text-xl text-white/70 max-w-xl leading-relaxed">
-              Abogada en ejercicio, más de 15 años de experiencia en alta dirección en la Administración Pública de la Comunitat Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Cuando te asesoro, no solo sé qué dice la ley. Sé cómo se aplica.
+              Abogada en ejercicio con trayectoria en puestos de alta dirección en la Administración Pública de la Comunidad Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Conozco la ley porque la enseño, la aplico y he ayudado a redactarla desde la propia institución.
             </p>
           </FadeUp>
 
