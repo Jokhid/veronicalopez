@@ -536,7 +536,7 @@ function HiloLegal() {
                 <Curtain>Una firma, dos especialistas</Curtain>
               </h2>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, Administrador de fincas y especialista en hipotecas y finanzas personales. Cuando un cliente necesita asesoramiento legal y financiero al mismo tiempo — que es más frecuente de lo que parece — trabajamos coordinados.</p>
+                <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, consultor patrimonial e hipotecario. Unificamos el criterio jurídico y el financiero. Si un caso presenta ambas vertientes, trabajamos de forma coordinada bajo una sola firma, evitando que tengas que duplicar explicaciones con distintos profesionales.</p>
                 <p>Una firma, dos especialistas, sin que tengas que empezar desde cero con cada uno.</p>
               </div>
               <motion.a
