@@ -35,12 +35,12 @@ const Icon = ({ name, className = "" }: { name: string; className?: string }) =>
 );
 
 const services = [
-  { icon: "account_balance", title: "Derecho administrativo y relaciones con la Administración", text: "Asesoramiento y defensa en procedimientos administrativos, recursos, responsabilidad patrimonial, contratación pública, expedientes sancionadores y relaciones con la Administración." },
-  { icon: "gavel", title: "Derecho civil y de familia", text: "Divorcios, herencias, contratos, reclamaciones. Sin dramatismo innecesario, con honestidad sobre plazos y resultados. Porque a veces el mejor abogado es el que te dice lo que no quieres escuchar antes de que sea demasiado tarde." },
-  { icon: "home", title: "Inmobiliario y comunidades", text: "Compraventas, arrendamientos, reclamaciones de comunidades de propietarios. Trabajo en coordinación con el área de administración de fincas de HiloLegal para ofrecer una solución integral cuando el problema es tanto jurídico como de gestión." },
+  { icon: "account_balance", title: "Derecho administrativo y relaciones con la Administración", text: "La Administración Pública se rige por tiempos, lógicas internas y criterios normativos específicos. Limitarse a leer el boletín oficial es insuficiente cuando afrontas una sanción, un recurso o una relación contractual con un organismo público. He dirigido esa maquinaria por dentro, conozco cómo se instruyen los expedientes, cómo interpretan los técnicos la normativa y dónde se sitúan los márgenes legales que no aparecen en los manuales." },
+  { icon: "gavel", title: "Derecho civil y de familia", text: "Las decisiones personales más relevantes conllevan una dimensión jurídica inevitable. Una herencia sin planificar, un proceso de divorcio carente de estrategia o un contrato redactado con premura generan conflictos que se arrastran durante años. Trabajo con absoluto rigor técnico, comunicando con honestidad las opciones reales de éxito. El valor del asesoramiento no radica en decir lo que deseas escuchar, sino en mostrar la realidad del escenario legal." },
+  { icon: "home", title: "Inmobiliario y comunidades", text: "La compra, venta o arrendamiento de un inmueble exige certezas jurídicas para proteger el capital invertido. Trabajamos en coordinación directa con el área de administración de fincas de HiloLegal, ofreciendo una solución que cubre desde la auditoría legal previa de la propiedad hasta la reclamación judicial por impagos, manteniendo un único interlocutor estratégico." },
   { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
-  { icon: "balance", title: "Derecho penal", text: "Defensa y representación en procedimientos penales. Claridad total sobre el proceso, sin promesas que no se pueden cumplir." },
-  { icon: "psychology", title: "Consultoría jurídica especializada", text: "Informes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
+  { icon: "balance", title: "Derecho penal", text: "Un procedimiento penal representa el escenario más exigente para la reputación y viabilidad de una empresa o un particular. Requiere una defensa técnica sin fisuras, una estrategia clara desde la primera declaración y un acompañamiento que anticipe los movimientos de la acusación. Ofrezco representación procesal con absoluta transparencia sobre las expectativas reales del caso.\n\n\nDefensa y representación en procedimientos penales. Claridad total sobre el proceso, sin promesas que no se pueden cumplir." },
+  { icon: "psychology", title: "Consultoría jurídica especializada", text: "Las empresas que licitan con el sector público o actúan en mercados regulados necesitan identificar las contingencias jurídicas antes de que se consoliden. El riesgo en el entorno público rara vez reside en el texto estricto de la ley, se encuentra en los criterios de aplicación de la propia Administración. Haber ocupado puestos de alta dirección en la Generalitat Valenciana me permite detectar las vulnerabilidades que pasan desapercibidas desde el exterior de la institución.\n\n\nInformes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
 ];
 
 const errors = [
@@ -211,7 +211,7 @@ function Hero() {
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight text-balance">
             {[
               "Derecho con criterio.",
-              "Experiencia que viene de dentro.",
+              "La experiencia desde dentro.",
             ].map((line, i) => (
               <Curtain key={i} delay={0.15 + i * 0.1} className="block">
                 <span className="block">{line}</span>
@@ -221,7 +221,7 @@ function Hero() {
 
           <FadeUp delay={0.6}>
             <p className="text-xl text-white/70 max-w-xl leading-relaxed">
-              Abogada en ejercicio, más de 15 años de experiencia en alta dirección en la Administración Pública de la Comunitat Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Cuando te asesoro, no solo sé qué dice la ley. Sé cómo se aplica.
+              Abogada en ejercicio con trayectoria en puestos de alta dirección en la Administración Pública de la Comunidad Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Conozco la ley porque la enseño, la aplico y he ayudado a redactarla desde la propia institución.
             </p>
           </FadeUp>
 
@@ -275,7 +275,7 @@ function Hero() {
 
 function TrustStats() {
   const items = [
-    { i: "workspace_premium", t: "15 años de ejercicio profesional" },
+    { i: "workspace_premium", t: "20 AÑOS DE EJERCICIO PROFESIONAL" },
     { i: "account_balance", t: "Alta dirección pública" },
     { i: "school", t: "Docencia en la Facultad de Derecho" },
   ];
@@ -299,7 +299,7 @@ function TrustStats() {
 
 function Diagnosis() {
   const items = [
-    { n: "01", t: "Trayectoria consolidada", d: "15 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
+    { n: "01", t: "Trayectoria consolidada", d: "20 años de ejercicio profesional en asesoramiento jurídico, defensa de intereses y análisis de asuntos complejos.", img: 3 },
     { n: "02", t: "Criterio institucional", d: "Experiencia en alta dirección dentro de la administración local y autonómica, con conocimiento real del funcionamiento institucional.", img: 2 },
     { n: "03", t: "Visión académica", d: "Profesora en la Facultad de Derecho de Alicante, con una visión técnica, académica y práctica del Derecho.", img: 4 },
   ];
@@ -359,7 +359,11 @@ function Differentiation() {
           </div>
           <FadeUp delay={0.1}>
             <div className="space-y-8 text-xl text-gray-300 leading-relaxed">
-              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.</p>
+              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.
+
+
+
+Cuando asumo un asunto, no gestiono un expediente burocrático, evalúo una decisión con consecuencias reales. Mi objetivo es que conozcas el impacto económico y jurídico de cada escenario antes de dar el paso, eliminando la incertidumbre.</p>
             </div>
           </FadeUp>
         </div>
@@ -488,7 +492,7 @@ function About() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Abogada con más de 15 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
+                <p>Abogada con más de 20 años de experiencia y una trayectoria marcada por el rigor jurídico, la responsabilidad institucional y la vocación docente.</p>
                 <p>He ocupado puestos de alta dirección en la administración local y autonómica, lo que me permite conocer desde dentro el funcionamiento de las instituciones públicas y los procedimientos administrativos.</p>
                 <p>Mi experiencia como profesora en la Facultad de Derecho de Alicante aporta una visión técnica y académica: análisis profundo, explicación clara y estrategia bien fundamentada.</p>
               </div>
@@ -532,7 +536,7 @@ function HiloLegal() {
                 <Curtain>Una firma, dos especialistas</Curtain>
               </h2>
               <div className="space-y-6 text-xl text-[#4A4A4A] leading-relaxed">
-                <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, Administrador de fincas y especialista en hipotecas y finanzas personales. Cuando un cliente necesita asesoramiento legal y financiero al mismo tiempo — que es más frecuente de lo que parece — trabajamos coordinados.</p>
+                <p>Soy cofundadora de HiloLegal junto a José Carlos Hidalgo, consultor patrimonial e hipotecario. Unificamos el criterio jurídico y el financiero. Si un caso presenta ambas vertientes, trabajamos de forma coordinada bajo una sola firma, evitando que tengas que duplicar explicaciones con distintos profesionales.</p>
                 <p>Una firma, dos especialistas, sin que tengas que empezar desde cero con cada uno.</p>
               </div>
               <motion.a
