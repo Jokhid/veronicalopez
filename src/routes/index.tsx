@@ -355,16 +355,12 @@ function Differentiation() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="lg:sticky lg:top-32 space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
-              <Curtain>Hay abogados que conocen la ley. Pocos la han aplicado desde ambos lados.</Curtain>
+              <Curtain>Hay abogados que conocen la ley.{"\u00a0"}\n\n\nPocos la han aplicado desde ambos lados.</Curtain>
             </h2>
           </div>
           <FadeUp delay={0.1}>
             <div className="space-y-8 text-xl text-gray-300 leading-relaxed">
-              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.
-
-
-
-Cuando asumo un asunto, no gestiono un expediente burocrático, evalúo una decisión con consecuencias reales. Mi objetivo es que conozcas el impacto económico y jurídico de cada escenario antes de dar el paso, eliminando la incertidumbre.</p>
+              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.{"\u00a0"}{"\n\n\n"}Cuando asumo un asunto, no gestiono un expediente burocrático, evalúo una decisión con consecuencias reales. Mi objetivo es que conozcas el impacto económico y jurídico de cada escenario antes de dar el paso, eliminando la incertidumbre.</p>
             </div>
           </FadeUp>
         </div>
@@ -382,7 +378,7 @@ function Services() {
             <Curtain>Áreas de asesoramiento jurídico</Curtain>
           </h2>
           <FadeUp delay={0.15}>
-            <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil e institucional con una visión estratégica y preventiva.</p>
+            <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil, familia, penal e institucional con una visión estratégica y preventiva.</p>
           </FadeUp>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5]">
