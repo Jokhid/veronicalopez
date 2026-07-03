@@ -355,7 +355,7 @@ function Differentiation() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="lg:sticky lg:top-32 space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
-              <Curtain>Hay abogados que conocen la ley. Pocos la han aplicado desde ambos lados.</Curtain>
+              <Curtain>Hay abogados que conocen la ley.{"\u00a0"}\n\n\nPocos la han aplicado desde ambos lados.</Curtain>
             </h2>
           </div>
           <FadeUp delay={0.1}>
@@ -382,7 +382,7 @@ function Services() {
             <Curtain>Áreas de asesoramiento jurídico</Curtain>
           </h2>
           <FadeUp delay={0.15}>
-            <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil e institucional con una visión estratégica y preventiva.</p>
+            <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil, familia, penal e institucional con una visión estratégica y preventiva.</p>
           </FadeUp>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5]">
