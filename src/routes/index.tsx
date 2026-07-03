@@ -222,7 +222,7 @@ function Hero() {
 
           <FadeUp delay={0.6}>
             <p className="text-xl text-white/70 max-w-xl leading-relaxed">
-              Abogada en ejercicio con trayectoria en puestos de alta dirección en la Administración Pública de la Comunidad Valenciana y profesora asociada de Derecho en la Universidad de Alicante. Conozco la ley porque la enseño, la aplico y he ayudado a redactarla desde la propia institución.
+              Abogada en ejercicio con trayectoria en puestos de alta dirección en la Administración Pública de la Comunidad Valenciana y profesora asociada de Derecho en la Universidad de Alicante.{"\u00a0"}\n\n\nConozco la ley porque la enseño, la aplico y he ayudado a redactarla desde la propia institución.
             </p>
           </FadeUp>
 
