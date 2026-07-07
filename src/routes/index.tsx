@@ -355,7 +355,7 @@ function Differentiation() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           <div className="lg:sticky lg:top-32 space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
-              <Curtain>Hay abogados que conocen la ley.{"\u00a0"}\n\n\nPocos la han aplicado desde ambos lados.</Curtain>
+              <Curtain>Hay abogados que conocen la ley.{"\u00a0"}Pocos la han aplicado desde ambos lados.</Curtain>
             </h2>
           </div>
           <FadeUp delay={0.1}>
