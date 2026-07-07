@@ -42,7 +42,6 @@ const services = [
   { icon: "balance", title: "Derecho penal", text: "Un procedimiento penal representa el escenario más exigente para la reputación y viabilidad de una empresa o un particular. Requiere una defensa técnica sin fisuras, una estrategia clara desde la primera declaración y un acompañamiento que anticipe los movimientos de la acusación. \n\n\nOfrezco representación procesal con absoluta transparencia sobre las expectativas reales del caso. Defensa y representación en procedimientos penales. Claridad total sobre el proceso, sin promesas que no se pueden cumplir." },
   { icon: "psychology", title: "Consultoría jurídica especializada", text: "Las empresas que licitan con el sector público o actúan en mercados regulados necesitan identificar las contingencias jurídicas antes de que se consoliden. El riesgo en el entorno público rara vez reside en el texto estricto de la ley, se encuentra en los criterios de aplicación de la propia Administración. \n\n\nHaber ocupado puestos de alta dirección en la Generalitat Valenciana me permite detectar las vulnerabilidades que pasan desapercibidas desde el exterior de la institución. Informes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
   { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
-
 ];
 
 const errors = [
