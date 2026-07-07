@@ -381,17 +381,17 @@ function Services() {
             <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil, familia, penal e institucional con una visión estratégica y preventiva.</p>
           </FadeUp>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#E5E5E5]">
           {services.map((s, idx) => (
-            <FadeUp key={s.title} delay={(idx % 3) * 0.08}>
+            <FadeUp key={s.title} delay={(idx % 2) * 0.08}>
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={spring}
-                className="h-full bg-white p-12 hover:bg-[#C5A566] group transition-colors"
+                className="h-full bg-white p-12 hover:bg-[#1A1A1A] group transition-colors border border-transparent hover:border-[#1A1A1A]"
               >
                 <Icon name={s.icon} className="text-[#C5A566] text-4xl mb-8 group-hover:text-white transition-colors" />
-                <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors">{s.title}</h3>
-                <p className="text-[#4A4A4A] mb-10 group-hover:text-white/80 transition-colors">{s.text}</p>
+                <h3 className="text-xl font-bold mb-4 group-hover:text-[#C5A566] transition-colors">{s.title}</h3>
+                <p className="text-[#4A4A4A] mb-10 group-hover:text-white transition-colors leading-relaxed">{s.text}</p>
                 <a className="text-xs font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-white transition-colors" href="#contact">
                   Consultar <Icon name="arrow_forward" className="text-sm" />
                 </a>
