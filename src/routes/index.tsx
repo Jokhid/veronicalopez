@@ -39,9 +39,9 @@ const services = [
   { icon: "account_balance", title: "Derecho administrativo y relaciones con la Administración", text: "La Administración Pública se rige por tiempos, lógicas internas y criterios normativos específicos. Limitarse a leer el boletín oficial es insuficiente cuando afrontas una sanción, un recurso o una relación contractual con un organismo público. \n\n\nHe dirigido esa maquinaria por dentro, conozco cómo se instruyen los expedientes, cómo interpretan los técnicos la normativa y dónde se sitúan los márgenes legales que no aparecen en los manuales." },
   { icon: "gavel", title: "Derecho civil y de familia", text: "Las decisiones personales más relevantes conllevan una dimensión jurídica inevitable. Una herencia sin planificar, un proceso de divorcio carente de estrategia o un contrato redactado con premura generan conflictos que se arrastran durante años. \n\n\nTrabajo con absoluto rigor técnico, comunicando con honestidad las opciones reales de éxito. El valor del asesoramiento no radica en decir lo que deseas escuchar, sino en mostrar la realidad del escenario legal." },
   { icon: "home", title: "Inmobiliario y comunidades", text: "La compra, venta o arrendamiento de un inmueble exige certezas jurídicas para proteger el capital invertido. \n\n\nTrabajamos en coordinación directa con el área de administración de fincas de HiloLegal, ofreciendo una solución que cubre desde la auditoría legal previa de la propiedad hasta la reclamación judicial por impagos, manteniendo un único interlocutor estratégico." },
-  { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
   { icon: "balance", title: "Derecho penal", text: "Un procedimiento penal representa el escenario más exigente para la reputación y viabilidad de una empresa o un particular. Requiere una defensa técnica sin fisuras, una estrategia clara desde la primera declaración y un acompañamiento que anticipe los movimientos de la acusación. \n\n\nOfrezco representación procesal con absoluta transparencia sobre las expectativas reales del caso. Defensa y representación en procedimientos penales. Claridad total sobre el proceso, sin promesas que no se pueden cumplir." },
   { icon: "psychology", title: "Consultoría jurídica especializada", text: "Las empresas que licitan con el sector público o actúan en mercados regulados necesitan identificar las contingencias jurídicas antes de que se consoliden. El riesgo en el entorno público rara vez reside en el texto estricto de la ley, se encuentra en los criterios de aplicación de la propia Administración. \n\n\nHaber ocupado puestos de alta dirección en la Generalitat Valenciana me permite detectar las vulnerabilidades que pasan desapercibidas desde el exterior de la institución. Informes, dictámenes y orientación estratégica en asuntos que requieren experiencia técnica, criterio jurídico y visión institucional." },
+  { icon: "shield", title: "Estrategia jurídica preventiva", text: "Análisis previo de riesgos, revisión documental, preparación de actuaciones y diseño de estrategias antes de tomar decisiones relevantes." },
 ];
 
 const errors = [
@@ -381,17 +381,17 @@ function Services() {
             <p className="text-xl text-[#4A4A4A] max-w-2xl">Un enfoque integral que combina derecho administrativo, civil, familia, penal e institucional con una visión estratégica y preventiva.</p>
           </FadeUp>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#E5E5E5]">
           {services.map((s, idx) => (
-            <FadeUp key={s.title} delay={(idx % 3) * 0.08}>
+            <FadeUp key={s.title} delay={(idx % 2) * 0.08}>
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={spring}
-                className="h-full bg-white p-12 hover:bg-[#C5A566] group transition-colors"
+                className="h-full bg-white p-12 hover:bg-[#1A1A1A] group transition-colors border border-transparent hover:border-[#1A1A1A]"
               >
                 <Icon name={s.icon} className="text-[#C5A566] text-4xl mb-8 group-hover:text-white transition-colors" />
-                <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors">{s.title}</h3>
-                <p className="text-[#4A4A4A] mb-10 group-hover:text-white/80 transition-colors">{s.text}</p>
+                <h3 className="text-xl font-bold mb-4 group-hover:text-[#C5A566] transition-colors">{s.title}</h3>
+                <p className="text-[#4A4A4A] mb-10 group-hover:text-white transition-colors leading-relaxed">{s.text}</p>
                 <a className="text-xs font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-white transition-colors" href="#contact">
                   Consultar <Icon name="arrow_forward" className="text-sm" />
                 </a>
