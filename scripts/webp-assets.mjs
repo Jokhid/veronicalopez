@@ -3,16 +3,37 @@ import { readdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
-const publicPngReferences = [
-  ["/1.png", "/1.webp"],
-  ["/2.png", "/2.webp"],
-  ["/3.png", "/3.webp"],
-  ["/4.png", "/4.webp"],
-  ["/5.png", "/5.webp"],
-  ["/6.png", "/6.webp"],
-  ["/logo.png", "/logo.webp"],
-  ["/logo-white.png", "/logo-white.webp"],
-  ["/file_00000000b9c07246b0256fc18d8d4888.png", "/file_00000000b9c07246b0256fc18d8d4888.webp"],
+const publicImageReferences = [
+  ["/1.png", "/veronica-lopez-abogada-altea.webp"],
+  ["/1.webp", "/veronica-lopez-abogada-altea.webp"],
+  ["/2.png", "/criterio-institucional-administracion.webp"],
+  ["/2.webp", "/criterio-institucional-administracion.webp"],
+  ["/3.png", "/trayectoria-juridica-veronica-lopez.webp"],
+  ["/3.webp", "/trayectoria-juridica-veronica-lopez.webp"],
+  ["/4.png", "/docencia-derecho-universidad-alicante.webp"],
+  ["/4.webp", "/docencia-derecho-universidad-alicante.webp"],
+  ["/5.png", "/metodo-de-trabajo-juridico.webp"],
+  ["/5.webp", "/metodo-de-trabajo-juridico.webp"],
+  ["/6.png", "/veronica-lopez-perfil-profesional.webp"],
+  ["/6.webp", "/veronica-lopez-perfil-profesional.webp"],
+  ["/logo.png", "/logo-veronica-lopez.webp"],
+  ["/logo.webp", "/logo-veronica-lopez.webp"],
+  ["/logo-white.png", "/logo-veronica-lopez-blanco.webp"],
+  ["/logo-white.webp", "/logo-veronica-lopez-blanco.webp"],
+  ["/file_00000000b9c07246b0256fc18d8d4888.png", "/hilolegal-dos-especialistas.webp"],
+  ["/file_00000000b9c07246b0256fc18d8d4888.webp", "/hilolegal-dos-especialistas.webp"],
+];
+
+const webpOutputs = [
+  ["1.png", "veronica-lopez-abogada-altea.webp"],
+  ["2.png", "criterio-institucional-administracion.webp"],
+  ["3.png", "trayectoria-juridica-veronica-lopez.webp"],
+  ["4.png", "docencia-derecho-universidad-alicante.webp"],
+  ["5.png", "metodo-de-trabajo-juridico.webp"],
+  ["6.png", "veronica-lopez-perfil-profesional.webp"],
+  ["logo.png", "logo-veronica-lopez.webp"],
+  ["logo-white.png", "logo-veronica-lopez-blanco.webp"],
+  ["file_00000000b9c07246b0256fc18d8d4888.png", "hilolegal-dos-especialistas.webp"],
 ];
 
 async function generateWebpFiles(root) {
@@ -20,12 +41,18 @@ async function generateWebpFiles(root) {
   if (!existsSync(publicDir)) return;
 
   const entries = await readdir(publicDir, { withFileTypes: true });
-  await Promise.all(
+  const pngNames = new Set(
     entries
       .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".png"))
-      .map(async (entry) => {
-        const input = path.join(publicDir, entry.name);
-        const output = path.join(publicDir, entry.name.replace(/\.png$/i, ".webp"));
+      .map((entry) => entry.name),
+  );
+
+  await Promise.all(
+    webpOutputs
+      .filter(([pngName]) => pngNames.has(pngName))
+      .map(async ([pngName, webpName]) => {
+        const input = path.join(publicDir, pngName);
+        const output = path.join(publicDir, webpName);
 
         await sharp(input)
           .webp({ quality: 86, effort: 6 })
@@ -34,9 +61,9 @@ async function generateWebpFiles(root) {
   );
 }
 
-function rewritePublicPngReferences(code) {
-  return publicPngReferences.reduce(
-    (nextCode, [pngPath, webpPath]) => nextCode.replaceAll(pngPath, webpPath),
+function rewritePublicImageReferences(code) {
+  return publicImageReferences.reduce(
+    (nextCode, [oldPath, newPath]) => nextCode.replaceAll(oldPath, newPath),
     code.replace("`/${n}.png`", "`/${n}.webp`"),
   );
 }
@@ -93,7 +120,7 @@ export function webpAssets() {
     transform(code, id) {
       if (!/\.(tsx?|jsx?)$/.test(id)) return null;
 
-      const rewritten = addImagePriorities(rewritePublicPngReferences(code), id);
+      const rewritten = addImagePriorities(rewritePublicImageReferences(code), id);
       if (rewritten === code) return null;
 
       return {
