@@ -10,6 +10,101 @@ import {
 
 import appCss from "../styles.css?url";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Attorney", "LegalService"],
+      "@id": "https://veronicalopez.hilolegal.es/#legalservice",
+      name: "Verónica López",
+      url: "https://veronicalopez.hilolegal.es/",
+      description:
+        "Abogada en Altea con experiencia en alta dirección pública, docencia universitaria y ejercicio privado. Derecho administrativo, civil, familia, comunidades, penal y consultoría jurídica especializada.",
+      telephone: "+34623976706",
+      areaServed: [
+        { "@type": "City", name: "Altea" },
+        { "@type": "AdministrativeArea", name: "Costa Blanca" },
+        { "@type": "AdministrativeArea", name: "Alicante" },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Calle Calitx 9",
+        postalCode: "03590",
+        addressLocality: "Altea",
+        addressRegion: "Alicante",
+        addressCountry: "ES",
+      },
+      serviceType: [
+        "Derecho administrativo",
+        "Derecho civil y de familia",
+        "Inmobiliario y comunidades",
+        "Derecho penal",
+        "Consultoría jurídica especializada",
+        "Estrategia jurídica preventiva",
+      ],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://veronicalopez.hilolegal.es/#person",
+      name: "Verónica López",
+      jobTitle: "Abogada",
+      affiliation: {
+        "@type": "CollegeOrUniversity",
+        name: "Universidad de Alicante",
+      },
+      worksFor: {
+        "@id": "https://veronicalopez.hilolegal.es/#legalservice",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://veronicalopez.hilolegal.es/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "¿Qué tipo de asuntos lleva Verónica López?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Asuntos jurídicos que requieren análisis, estrategia y criterio profesional, especialmente en el ámbito administrativo, civil, institucional y de asesoramiento preventivo.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Trabaja con particulares, empresas e instituciones?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sí. El asesoramiento puede dirigirse a particulares, profesionales, empresas, entidades e instituciones que necesiten orientación jurídica especializada.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿La primera consulta es gratuita?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sí, la primera consulta es gratuita y sin compromiso. En ella valoramos tu caso y te explicamos las opciones antes de que decidas si quieres seguir adelante.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Atiende en Alicante?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Atiende en Alicante y también puede realizar consultas online cuando el asunto lo permita.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "¿Qué diferencia este despacho?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "La combinación de experiencia jurídica, trayectoria institucional y visión académica. Esa perspectiva permite analizar cada asunto con profundidad y diseñar estrategias realistas.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -85,11 +180,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", href: "/1.webp", as: "image", fetchPriority: "high" },
+      { rel: "preload", href: "/veronica-lopez-abogada-altea.webp", as: "image", fetchPriority: "high" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_balance,arrow_forward,balance,call,expand_more,gavel,home,location_on,mail,psychology,school,shield,workspace_premium&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -100,9 +194,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body>
         {children}
