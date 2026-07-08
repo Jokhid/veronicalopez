@@ -360,7 +360,7 @@ function Differentiation() {
           </div>
           <FadeUp delay={0.1}>
             <div className="space-y-8 text-xl text-gray-300 leading-relaxed">
-              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.{"\u00a0"}{"\u00a0"}\n\n\n{"\u00a0"} Cuando asumo un asunto, no gestiono un expediente burocrático, evalúo una decisión con consecuencias reales. Mi objetivo es que conozcas el impacto económico y jurídico de cada escenario antes de dar el paso, eliminando la incertidumbre.</p>
+              <p>He trabajado como asesora jurídica, como parte del equipo directivo de organismos públicos autonómicos y locales y como profesora universitaria. Eso significa que cuando tienes un problema con la Administración, con un contrato, con una herencia o con cualquier asunto civil, no empiezo desde cero: entiendo cómo razona el sistema, cuándo vale la pena batallar y cuándo hay un camino más inteligente.{"\u00a0"}{"\u00a0"}\n\n\nCuando asumo un asunto, no gestiono un expediente burocrático, evalúo una decisión con consecuencias reales. Mi objetivo es que conozcas el impacto económico y jurídico de cada escenario antes de dar el paso, eliminando la incertidumbre.</p>
             </div>
           </FadeUp>
         </div>
