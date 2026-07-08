@@ -714,17 +714,17 @@ function Contact() {
               />
             </div>
 
-            <motion.a
-              href="https://docs.google.com/spreadsheets/d/1Klnh7mZ1NiWs6vNx0omeKrJWbiUaROj2tEYm5KN9HTU/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              type="submit"
+              disabled={status === "sending"}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={spring}
-              className="inline-block text-center w-full bg-[#C5A566] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#C5A566]/20"
+              className="inline-block text-center w-full bg-[#C5A566] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#C5A566]/20 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Enviar consulta
-            </motion.a>
+              {status === "sending" ? "Enviando…" : "Enviar consulta"}
+            </motion.button>
+
 
             {status === "ok" && (
               <motion.p
