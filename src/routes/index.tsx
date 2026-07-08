@@ -323,7 +323,7 @@ function Diagnosis() {
           {items.map((x, idx) => (
             <FadeUp key={x.n} delay={idx * 0.1}>
               <article className="space-y-6 group">
-                <div className="relative overflow-hidden aspect-[4/5]">
+                <div className="relative overflow-hidden aspect-square">
                   <motion.img
                     src={IMG(x.img)}
                     alt={x.t}
