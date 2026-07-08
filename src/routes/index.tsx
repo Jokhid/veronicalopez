@@ -148,7 +148,7 @@ function Header() {
       className="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-[#E5E5E5]"
     >
       <nav className="flex justify-between items-center w-full px-6 py-5 max-w-[1200px] mx-auto">
-        <a className="flex items-center gap-3 group" href="#">
+        <a className="flex items-center gap-3 group" href="https://hilolegal.es" target="_blank" rel="noopener noreferrer">
           <motion.img
             src="/logo.png"
             alt="Logo Verónica López"
@@ -537,7 +537,7 @@ function HiloLegal() {
                 <p>Una firma, dos especialistas, sin que tengas que empezar desde cero con cada uno.</p>
               </div>
               <motion.a
-                href="https://josecarlos.hilolegal.es/"
+                href="https://josecarlos.hilolegal.es"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 4 }}
@@ -561,7 +561,7 @@ function HiloLegal() {
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 text-white space-y-2">
-                <p className="font-bold uppercase tracking-widest text-xs">HiloLegal</p>
+                <a href="https://hilolegal.es" target="_blank" rel="noopener noreferrer" className="font-bold uppercase tracking-widest text-xs hover:text-[#C5A566] transition-colors">HiloLegal</a>
               </div>
             </div>
           </FadeUp>
@@ -714,16 +714,17 @@ function Contact() {
               />
             </div>
 
-            <motion.button
-              whileHover={{ scale: status === "sending" ? 1 : 1.02 }}
-              whileTap={{ scale: status === "sending" ? 1 : 0.98 }}
+            <motion.a
+              href="https://docs.google.com/spreadsheets/d/1Klnh7mZ1NiWs6vNx0omeKrJWbiUaROj2tEYm5KN9HTU/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               transition={spring}
-              type="submit"
-              disabled={status === "sending"}
-              className="w-full bg-[#C5A566] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#C5A566]/20 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="inline-block text-center w-full bg-[#C5A566] text-white py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-[#1A1A1A] transition-colors shadow-2xl shadow-[#C5A566]/20"
             >
-              {status === "sending" ? "Enviando…" : status === "ok" ? "¡Enviado!" : "Enviar consulta"}
-            </motion.button>
+              Enviar consulta
+            </motion.a>
 
             {status === "ok" && (
               <motion.p
