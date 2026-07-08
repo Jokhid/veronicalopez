@@ -9,34 +9,49 @@ const contactSchema = z.object({
   message: z.string().trim().max(2000).optional().default(""),
 });
 
+const SPREADSHEET_ID = "1Klnh7mZ1NiWs6vNx0omeKrJWbiUaROj2tEYm5KN9HTU";
+const SHEET_RANGE = "Leads!A:G";
+
 export const submitContact = createServerFn({ method: "POST" })
   .inputValidator((input) => contactSchema.parse(input))
   .handler(async ({ data }) => {
-    const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    const lovableApiKey = process.env.LOVABLE_API_KEY;
+    const connectorApiKey = process.env.GOOGLE_SHEETS_API_KEY;
 
-    if (!webhookUrl) {
-      throw new Error("Missing GOOGLE_SHEETS_WEBHOOK_URL");
+    if (!lovableApiKey || !connectorApiKey) {
+      throw new Error("Google Sheets connector is not configured.");
     }
 
-    const response = await fetch(webhookUrl, {
+    const fecha = new Date().toLocaleString("es-ES", { timeZone: "Europe/Madrid" });
+
+    const url = `https://connector-gateway.lovable.dev/google_sheets/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_RANGE}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`;
+
+    const response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "text/plain;charset=utf-8",
+        Authorization: `Bearer ${lovableApiKey}`,
+        "X-Connection-Api-Key": connectorApiKey,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: data.name,
-        phone: data.phone,
-        email: data.email,
-        topic: data.topic,
-        message: data.message,
-        origin: "Web José Carlos Hidalgo",
+        values: [
+          [
+            fecha,
+            data.name,
+            data.phone,
+            data.email,
+            data.topic,
+            data.message,
+            "Web Verónica López",
+          ],
+        ],
       }),
     });
 
-    const text = await response.text();
-
     if (!response.ok) {
-      throw new Error(`Google Sheets webhook failed (${response.status}): ${text}`);
+      const text = await response.text();
+      console.error(`Google Sheets append failed [${response.status}]: ${text}`);
+      throw new Error(`No se ha podido registrar la consulta (${response.status}).`);
     }
 
     return { success: true };
