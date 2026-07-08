@@ -2,10 +2,9 @@
   "version": 1,
   "asset_id": "6983cbf1-1eb2-4a3c-8be6-ea371b1e0889",
   "project_id": "53998476-6c75-4f0d-9ea3-f7e46321de60",
-  "url": "/__l5e/assets-v1/6983cbf1-1eb2-4a3c-8be6-ea371b1e0889/banner3.png",
-  "r2_key": "a/v1/53998476-6c75-4f0d-9ea3-f7e46321de60/6983cbf1-1eb2-4a3c-8be6-ea371b1e0889/banner3.png",
-  "original_filename": "banner3.png",
-  "size": 1181305,
-  "content_type": "image/png",
+  "url": "/file_00000000b9c07246b0256fc18d8d4888.webp",
+  "r2_key": "public/file_00000000b9c07246b0256fc18d8d4888.webp",
+  "original_filename": "file_00000000b9c07246b0256fc18d8d4888.webp",
+  "content_type": "image/webp",
   "created_at": "2026-07-02T18:09:25Z"
 }
