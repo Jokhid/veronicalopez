@@ -41,6 +41,40 @@ function rewritePublicPngReferences(code) {
   );
 }
 
+function addImagePriorities(code, id) {
+  if (!id.endsWith("src/routes/index.tsx")) return code;
+
+  return code
+    .replace(
+      'alt="Logo Verónica López"\n            className="h-10 w-10 object-contain"',
+      'alt="Logo Verónica López"\n            loading="lazy"\n            decoding="async"\n            fetchPriority="low"\n            className="h-10 w-10 object-contain"',
+    )
+    .replace(
+      'alt="Verónica López, abogada"\n                className="w-full h-auto object-cover"',
+      'alt="Verónica López, abogada"\n                loading="eager"\n                decoding="async"\n                fetchPriority="high"\n                className="w-full h-auto object-cover"',
+    )
+    .replace(
+      'src={IMG(x.img)}\n                    alt={x.t}\n                    className="absolute inset-0 w-full h-full object-cover"',
+      'src={IMG(x.img)}\n                    alt={x.t}\n                    loading="lazy"\n                    decoding="async"\n                    fetchPriority="low"\n                    className="absolute inset-0 w-full h-full object-cover"',
+    )
+    .replace(
+      'src={IMG(5)}\n                alt="Método de trabajo jurídico"\n                className="absolute inset-0 w-full h-full object-cover"',
+      'src={IMG(5)}\n                alt="Método de trabajo jurídico"\n                loading="lazy"\n                decoding="async"\n                fetchPriority="low"\n                className="absolute inset-0 w-full h-full object-cover"',
+    )
+    .replace(
+      'alt="Verónica López"\n                  className="w-full h-[600px] object-cover"\n                  src={IMG(6)}',
+      'alt="Verónica López"\n                  loading="lazy"\n                  decoding="async"\n                  fetchPriority="low"\n                  className="w-full h-[600px] object-cover"\n                  src={IMG(6)}',
+    )
+    .replace(
+      'src={banner3Asset.url}\n                alt="HiloLegal"\n                className="absolute inset-0 w-full h-full object-cover"',
+      'src={banner3Asset.url}\n                alt="HiloLegal"\n                loading="lazy"\n                decoding="async"\n                fetchPriority="low"\n                className="absolute inset-0 w-full h-full object-cover"',
+    )
+    .replace(
+      '<img src="/logo-white.png" alt="Logo Verónica López" className="h-12 w-12 object-contain" />',
+      '<img src="/logo-white.png" alt="Logo Verónica López" loading="lazy" decoding="async" fetchPriority="low" className="h-12 w-12 object-contain" />',
+    );
+}
+
 export function webpAssets() {
   let root = process.cwd();
 
@@ -59,7 +93,7 @@ export function webpAssets() {
     transform(code, id) {
       if (!/\.(tsx?|jsx?)$/.test(id)) return null;
 
-      const rewritten = rewritePublicPngReferences(code);
+      const rewritten = addImagePriorities(rewritePublicPngReferences(code), id);
       if (rewritten === code) return null;
 
       return {
