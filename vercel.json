@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://hilolegal.es/veronica/",
+      "permanent": true
+    }
+  ]
+}
